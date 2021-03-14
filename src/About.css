@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
+    float: top;
 }
 .about__right {
     display: flex;
@@ -27,13 +28,14 @@ h2 {
     font-weight: 500;
     margin-bottom: 1px;
     margin-top: 1px;
-    color: #555;
+    color: #567;
 }
 h3 {
     font-size: 1.25rem;
     font-weight: 500;
     margin-bottom: 1px;
     margin-top: 1px;
+    color: #555;
 }
 p {
     font-size: 1rem;

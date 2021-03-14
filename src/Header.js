@@ -19,7 +19,7 @@ function Header() {
                 <img src="http://comeback-alums.ml/com back logo.png" alt="Comback logo here" />
                 <div className="header__input">
                     <SearchIcon />
-                    <input placeholder="Search Alumini" type="text"></input>
+                    <input placeholder="    Search Alumini" type="text"></input>
                 </div>
             </div>
             <div className="header__center">

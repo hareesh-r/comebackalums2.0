@@ -18,6 +18,7 @@
 .header__left{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 .header__input{
     display: flex;

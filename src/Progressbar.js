@@ -9,13 +9,17 @@ const ProgressBar = (props) => {
         backgroundColor: "#e9ecef",
         borderRadius: 50,
     }
-
+    const titleStyles = {
+        fontWeight: 600,
+        color: '#555',
+        margin: 8,
+    }
     const fillerStyles = {
         height: '100%',
         width: `${completed}%`,
         backgroundColor: bgcolor,
         borderRadius: 'inherit',
-        textAlign: 'right'
+        textAlign: 'center'
     }
 
     const labelStyles = {
@@ -26,10 +30,10 @@ const ProgressBar = (props) => {
 
     return (
         <div>
-            <p >{title_text}</p>
+            <p style={titleStyles}>{title_text}</p>
             <div style={containerStyles}>
                 <div style={fillerStyles}>
-                    <span style={labelStyles}>{`${completed}%`}</span>
+                    <span style={labelStyles}>{`${completed}`}</span>
                 </div>
             </div>
         </div>
