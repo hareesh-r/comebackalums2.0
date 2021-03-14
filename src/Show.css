@@ -1,0 +1,20 @@
+.show > h3:hover {
+    color: orange;
+}
+
+.services {
+    margin-top: 40px;
+    background: #555;
+}
+.services:hover {
+    background: black;
+    cursor: pointer;
+    transition: 1s;
+}
+.icon {
+    margin: 20px auto;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
