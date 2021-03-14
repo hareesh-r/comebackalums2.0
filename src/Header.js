@@ -19,24 +19,30 @@ function Header() {
                 <img src="http://comeback-alums.ml/com back logo.png" alt="Comback logo here" />
                 <div className="header__input">
                     <SearchIcon />
-                    <input type="text"></input>
+                    <input placeholder="Search Alumini" type="text"></input>
                 </div>
             </div>
             <div className="header__center">
-                <div className="header__option">
-                    <HomeIcon fontSize="large" /> HOME
+                <div className="header__option header__option--active">
+                    <div className="icons">
+                        <HomeIcon fontSize="large" /> 
+                        </div><div className="icon-name">HOME</div>
                 </div>
                 <div className="header__option">
-                    <InfoIcon fontSize="large" /> ABOUT
+                    <div className="icons">
+                        <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
                 </div>
                 <div className="header__option">
-                    <ListAltIcon fontSize="large" /> ALUMINI LIST
+                    <div className="icons">
+                        <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMINI LIST</div>
                 </div>
                 <div className="header__option">
-                    <CreateIcon fontSize="large" /> ALUMINI APPLICATION
+                    <div className="icons">
+                        <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMINI APPLICATION</div>
                 </div>
                 <div className="header__option">
-                    <ContactMailIcon fontSize="large" /> CONTACT
+                    <div className="icons">
+                        <ContactMailIcon fontSize="large" /> </div><div className="icon-name">CONTACT</div>
                 </div>
 
             </div>
