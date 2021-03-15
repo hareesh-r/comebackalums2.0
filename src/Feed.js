@@ -23,7 +23,7 @@ function Feed() {
             timestamp="5:10 PM"
             username="Hareesh"
             image="https://instagram.fixm1-1.fna.fbcdn.net/v/t51.2885-15/e35/130818281_2812069225676377_8278376770559914186_n.jpg?tp=1&_nc_ht=instagram.fixm1-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=58gfviUHVS8AX9ZofWD&oh=3f5ed339af7320a8f110d9e0536c1ba0&oe=6079BD25"/>
-            <Post />
+            <Post username="Hareesh" timestamp="aaru mani"/>
         </div>
     )
 }

@@ -1,10 +1,11 @@
 .post{
     display: flex;
-    margin: 10px 20%;
+    margin: 10px 30%;
     flex-direction: column;
-    background-color: white;
+    background-color: #eee;
     border-radius: 15px;
     box-shadow: 0px 9px 9px -9px rgba(0, 0,0,0.75);
+    max-width: 700px;
 }
 
 .post__top{
@@ -15,6 +16,7 @@
 }
 .post__avatar{
     margin-right: 10px;
+    margin-left: 20px;
 }
 .post__topInfo > h3 {
     font-size: medium;
@@ -37,9 +39,36 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
 }
 .post__image > img {
-    width: 80%;
-    padding: 10% 0px;
-    padding-top: 0px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.post__options{
+    border-top: 1px solid lightgray ;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+    padding: 15px;
+}
+.post__option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex: 1;
+}
+.post__option > p{
+    margin-left: 10px;
+}
+.post__option:hover {
+    border-radius: 100px;
+    color: red;
+    border-radius: 50px;
+    background: #eff2f5;
+    transition: transform 100ms ease-in;
 }
