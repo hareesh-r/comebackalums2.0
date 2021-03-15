@@ -6,7 +6,7 @@ function Show({ profileSrc, text, description }) {
         <div className="show">
             <div className="services">
                 <div className="icon">
-                    <Avatar src={profileSrc} />
+                    <Avatar className="show__avatar" src={profileSrc} />
                 </div>
                 <h3 className="alutitle">{text}</h3>
                 <p>{description}

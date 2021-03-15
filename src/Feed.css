@@ -2,3 +2,9 @@ h1{
     align-items: center;
     justify-content: center;
 }
+.feed {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

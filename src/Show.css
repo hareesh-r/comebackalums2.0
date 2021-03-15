@@ -1,5 +1,10 @@
 .show{
     display: flex;
+    max-width: 345px;
+}
+.show:hover{
+    transform: scale(1.07);
+    transition: transform 100ms ease-in;
 }
 
 .services{
@@ -40,7 +45,18 @@
 .alutitle {
     color: black;
 }
-.services:hover .alutitle:hover {
+.services:hover .alutitle{
     color: orange;
     transition: 1s;
+}
+.show > h3:hover {
+    color: orange;
+}
+.show__avatar{
+    margin: 10px;
+    border: 5px solid black;
+}
+.services:hover .show__avatar{
+    border: 5px solid white;
+    transition: transform 100ms ease-in;
 }
