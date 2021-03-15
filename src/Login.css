@@ -1,15 +1,28 @@
 .login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.login > button {
+    width: 500px;
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 999px;
+}
+.login > button:hover {
+    background-color: white;
+    color: red;
 }
 
-.login__logo > img{
-    width: 50%;
-    max-width: 600px;
+.login > div > img {
+    object-fit: contain;
+    height: 200px;
+    margin-left: 17%;
 }
-.login__logo > h1 {
+.login > div > h1 {
+    font-size: 4rem;
+    font-weight: 600;
     color: red;
-    font-size: 150px;
 }
