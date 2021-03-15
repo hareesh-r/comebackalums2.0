@@ -3,17 +3,24 @@ import './App.css';
 import Header from "./Header";
 import About from "./About";
 import Feed from "./Feed";
+import Login from "./Login";
 
 function App() {
+  const user = null;
   return (
     <div className="App">
-      <Header />
-      <div className="app__body">
-        <About />
-        <Feed />
-      </div>
-          
-      
+      {!user ? (
+        <Login />) : (
+        <>
+          <Header />
+          <div className="app__body">
+            <About />
+            <Feed />
+          </div>
+        </>
+      )
+      }
+
     </div>
   );
 }
