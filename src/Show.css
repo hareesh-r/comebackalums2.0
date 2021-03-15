@@ -1,20 +1,46 @@
+.show{
+    display: flex;
+}
+
+.services{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
 .show > h3:hover {
     color: orange;
 }
 
 .services {
-    margin-top: 40px;
+    margin: 40px 10px 0px 10px;
     background: #555;
+    border-radius: 40px;
+    justify-content: space-evenly;
+    flex: 1 1;
+    text-align: center;
 }
 .services:hover {
     background: black;
     cursor: pointer;
     transition: 1s;
 }
-.icon {
-    margin: 20px auto;
-    padding: 10px;
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
+.services:hover .alutitle {
+    color: white;
+    transition: 1s;
+}
+.services:hover p{
+    color: white;
+    transition: 1s;
+}
+.icon{
+    padding-bottom: 10px;
+}
+.alutitle {
+    color: black;
+}
+.services:hover .alutitle:hover {
+    color: orange;
+    transition: 1s;
 }
