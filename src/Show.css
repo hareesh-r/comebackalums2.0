@@ -1,20 +1,21 @@
-.show{
+.show {
     display: flex;
     max-width: 345px;
 }
-.show:hover{
+
+.show:hover {
     transform: scale(1.07);
     transition: transform 100ms ease-in;
 }
 
-.services{
+.services {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
 
-.show > h3:hover {
+.show>h3:hover {
     color: #ff3030;
 }
 
@@ -25,39 +26,48 @@
     justify-content: space-evenly;
     flex: 1 1;
     text-align: center;
-    box-shadow: 0px 9px 9px -9px rgba(0, 0,0,0.75);
+    box-shadow: 0px 9px 9px -9px rgba(0, 0, 0, 0.75);
 }
+
 .services:hover {
     background: black;
     cursor: pointer;
     transition: 1s;
 }
+
 .services:hover .alutitle {
     color: white;
     transition: 1s;
 }
-.services:hover p{
+
+.services:hover p {
     color: white;
     transition: 1s;
 }
-.icon{
+
+.icon {
     padding-bottom: 10px;
 }
+
 .alutitle {
     color: black;
 }
-.services:hover .alutitle{
+
+.services:hover .alutitle {
     color: #ff3030;
     transition: 1s;
 }
-.show > h3:hover {
+
+.show>h3:hover {
     color: #ff3030;
 }
-.show__avatar{
+
+.show__avatar {
     margin: 10px;
     border: 5px solid black;
 }
-.services:hover .show__avatar{
+
+.services:hover .show__avatar {
     border: 5px solid white;
     transition: transform 100ms ease-in;
 }

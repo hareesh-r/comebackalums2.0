@@ -1,12 +1,12 @@
-::placeholder { 
+::placeholder {
     color: black;
     font-weight: 500;
     font-size: 14px;
 }
 
-.header{
+.header {
     padding: 15px 20px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     position: sticky;
     background-color: white;
@@ -15,47 +15,54 @@
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 75);
 }
 
-.header__left{
+.header__left {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.header__input{
+
+.header__input {
     display: flex;
     align-items: center;
     background-color: #e1dbdb;
     padding: 10px;
     margin-left: 10px;
-    border-radius:50px;
+    border-radius: 50px;
 }
 
-.header__left > img {
+.header__left>img {
     height: 50px;
 }
 
-.header__input > input {
+.header__input>input {
     border: none;
     background-color: transparent;
     outline-width: 0;
 }
-.header__center{
+
+.header__center {
     display: flex;
     flex: 1;
     justify-content: center;
 }
-.header__option > .MuiSvgIcon-root{
+
+.header__option>.MuiSvgIcon-root {
     color: #787878;
 }
-.header__option:hover > .MuiSvgIcon-root{
+
+.header__option:hover>.MuiSvgIcon-root {
     color: red;
 }
-.header__option--active > .MuiSvgIcon-root{
+
+.header__option--active>.MuiSvgIcon-root {
     color: red;
 }
-.header__option--active{
+
+.header__option--active {
     border-bottom: 4px solid red;
 }
-.header__option .icon-name{
+
+.header__option .icon-name {
     padding: 10px;
 }
 
@@ -74,20 +81,21 @@
 .header__option:hover {
     color: red;
     background-color: #eff2f5;
-    border-radius:50px;
+    border-radius: 50px;
     align-items: center;
     padding: 0 30px;
     border-bottom: none;
 }
 
-.header__info{
+.header__info {
     display: flex;
-    align-items: center;   
+    align-items: center;
 }
-.header__info > h4 {
+
+.header__info>h4 {
     margin-left: 10px;
 }
 
-.header__right{
+.header__right {
     display: flex;
 }

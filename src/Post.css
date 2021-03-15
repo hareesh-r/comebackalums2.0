@@ -1,24 +1,26 @@
-.post{
+.post {
     display: flex;
     margin: 10px 30%;
     flex-direction: column;
     background-color: #eee;
     border-radius: 15px;
-    box-shadow: 0px 9px 9px -9px rgba(0, 0,0,0.75);
+    box-shadow: 0px 9px 9px -9px rgba(0, 0, 0, 0.75);
     max-width: 700px;
 }
 
-.post__top{
+.post__top {
     display: flex;
     position: relative;
     align-items: center;
     padding-top: 20px;
 }
-.post__avatar{
+
+.post__avatar {
     margin-right: 10px;
     margin-left: 20px;
 }
-.post__topInfo > h3 {
+
+.post__topInfo>h3 {
     font-size: medium;
     color: #000;
     margin-bottom: 1px;
@@ -26,28 +28,30 @@
     padding-bottom: 5px;
 }
 
-.post__topInfo > p {
+.post__topInfo>p {
     font-size: small;
     color: red;
     line-height: 0;
 }
+
 .post__bottom {
     padding: 0px 25px;
 }
 
-.post__image{
+.post__image {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 5px;
 }
-.post__image > img {
+
+.post__image>img {
     width: 100%;
     padding-top: 10px;
 }
 
-.post__options{
-    border-top: 1px solid lightgray ;
+.post__options {
+    border-top: 1px solid lightgray;
     display: flex;
     justify-content: space-evenly;
     font-size: medium;
@@ -55,16 +59,19 @@
     cursor: pointer;
     padding: 15px;
 }
-.post__option{
+
+.post__option {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 5px;
     flex: 1;
 }
-.post__option > p{
+
+.post__option>p {
     margin-left: 10px;
 }
+
 .post__option:hover {
     border-radius: 100px;
     color: red;

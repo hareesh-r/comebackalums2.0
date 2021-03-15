@@ -1,7 +1,8 @@
-h1{
+h1 {
     align-items: center;
     justify-content: center;
 }
+
 .feed {
     flex: 1;
     flex-direction: column;

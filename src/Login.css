@@ -1,9 +1,10 @@
-.login{
+.login {
     display: grid;
     place-items: center;
     height: 100vh;
 }
-.login > button {
+
+.login>button {
     width: 50%;
     background-color: red;
     color: white;
@@ -11,17 +12,19 @@
     font-size: 25px;
     border-radius: 999px;
 }
-.login > button:hover {
+
+.login>button:hover {
     background-color: white;
     color: red;
 }
 
-.login > div > img {
+.login>div>img {
     object-fit: contain;
     height: 200px;
     margin-left: 17%;
 }
-.login > div > h1 {
+
+.login>div>h1 {
     font-size: 4rem;
     font-weight: 600;
     color: red;

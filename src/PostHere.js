@@ -1,12 +1,12 @@
 import { Avatar } from '@material-ui/core';
-import React , { useState } from 'react'
+import React, { useState } from 'react'
 import "./PostHere.css";
 
 
 function PostHere() {
-    
-    const [input , setInput] = useState("");
-    const [imageUrl , setImageUrl] = useState("");
+
+    const [input, setInput] = useState("");
+    const [imageUrl, setImageUrl] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,12 +22,12 @@ function PostHere() {
                 <Avatar />
                 <form>
                     <input
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    className="postHere__input" placeholder="Your Testimonial" type="text"/>
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        className="postHere__input" placeholder="Your Testimonial" type="text" />
                     <input
-                    value={imageUrl}
-                    onChange={(e) => setImageUrl(e.target.value)} placeholder="image url (Optional)" />
+                        value={imageUrl}
+                        onChange={(e) => setImageUrl(e.target.value)} placeholder="image url (Optional)" />
                     <button onClick={handleSubmit} type="submit">Hidden Submit</button>
                 </form>
             </div>

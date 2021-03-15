@@ -1,7 +1,8 @@
-.bout:hover{
+.bout:hover {
     color: orange;
 }
-.about{
+
+.about {
     margin: 20px;
     margin-left: 10%;
     margin-right: 10%;
@@ -16,6 +17,7 @@
     width: 50%;
     float: top;
 }
+
 .about__right {
     display: flex;
     flex-direction: column;
@@ -30,6 +32,7 @@ h2 {
     margin-top: 1px;
     color: #567;
 }
+
 h3 {
     font-size: 1.25rem;
     font-weight: 500;
@@ -37,6 +40,7 @@ h3 {
     margin-top: 1px;
     color: #555;
 }
+
 p {
     font-size: 1rem;
     font-weight: 400;
