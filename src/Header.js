@@ -14,7 +14,16 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from './StateProvider';
 
 function Header() {
-    const [{user} , dispatch] = useStateValue();
+
+    const scrollTo = (ele) => {
+        ele.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    };
+
+
+    const [{ user }, dispatch] = useStateValue();
 
     return (
         <div className="header">
@@ -32,8 +41,8 @@ function Header() {
                     </div><div className="icon-name">HOME</div>
                 </div>
                 <div className="header__option">
-                    <div className="icons">
-                        <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
+                        <div className="icons">
+                            <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
                 </div>
                 <div className="header__option">
                     <div className="icons">

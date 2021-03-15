@@ -1,7 +1,9 @@
 import { Avatar } from '@material-ui/core';
 import React, { useState } from 'react'
+import db from './firebase';
 import "./PostHere.css";
 import { useStateValue } from './StateProvider';
+import firebase from "firebase";
 
 
 function PostHere() {
@@ -13,6 +15,14 @@ function PostHere() {
         e.preventDefault();
 
         // database manupulation pending
+        db.collection("posts").add({
+            message: input,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic: user.photoURL,
+            username: user.displayName,
+            image: imageUrl,
+
+        });
 
         setInput("");
         setImageUrl("");
