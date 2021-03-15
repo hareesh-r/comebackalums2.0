@@ -14,14 +14,14 @@
 }
 
 .postHere__top>form {
-    flex: 1;
     display: flex;
+    flex: 1;
 }
 
 .postHere__top>form>input {
     outline-style: 0;
     border: none;
-    padding: 5px 20px;
+    padding: 5px 2%;
     margin: 0 10px;
     border-radius: 999px;
     background-color: #e1dbdb;
