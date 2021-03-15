@@ -4,3 +4,8 @@
 .app{
     display: flex;
 }
+::selection {
+    color: #fff;
+    background: #ff3030;
+  }
+  

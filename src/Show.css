@@ -15,7 +15,7 @@
 }
 
 .show > h3:hover {
-    color: orange;
+    color: #ff3030;
 }
 
 .services {
@@ -47,11 +47,11 @@
     color: black;
 }
 .services:hover .alutitle{
-    color: orange;
+    color: #ff3030;
     transition: 1s;
 }
 .show > h3:hover {
-    color: orange;
+    color: #ff3030;
 }
 .show__avatar{
     margin: 10px;
