@@ -15,6 +15,7 @@
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 75);
 }
 
+
 .header__left {
     display: flex;
     justify-content: space-evenly;
@@ -65,18 +66,12 @@
 .header__option .icon-name {
     padding: 10px;
 }
-@media only screen and (max-width: 768px) {
-    .icon-name{
-        display: none;
-    }
-}
-
 
 .header__option {
     color: #787878;
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 10px;
     cursor: pointer;
     font-weight: 600;
     font-size: 16px;
@@ -102,4 +97,34 @@
 
 .header__right {
     display: flex;
+}
+@media only screen and (max-width: 1000px) {
+    .icon-name{
+        display: none;
+    }.header__info > h4 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .header__infoIcons {
+        visibility:hidden;
+        display: none;
+    }
+}
+@media only screen and (max-width: 1150px) {
+    .header__info > h4 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 610px) {
+    .header__input{
+        width: 25px;
+    }.header__input > ::-webkit-input-placeholder {
+         color: transparent;
+    }
+}@media only screen and (max-width: 450px) {
+    .header__info{
+        visibility:hidden;
+        display: none;
+    }
 }

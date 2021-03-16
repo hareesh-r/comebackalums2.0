@@ -54,6 +54,7 @@ function Header() {
                 <div className="header__info">
                     <Avatar src={user.photoURL} />
                     <h4>{user.displayName}</h4>
+                    <div className="header__infoIcons">
                     <IconButton>
                         <AddIcon />
                     </IconButton>
@@ -66,6 +67,7 @@ function Header() {
                     <IconButton>
                         <ExpandMoreIcon />
                     </IconButton>
+                    </div>
                 </div>
             </div>
         </div>
