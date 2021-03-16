@@ -15,14 +15,6 @@ import { useStateValue } from './StateProvider';
 
 function Header() {
 
-    const scrollTo = (ele) => {
-        ele.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
-    };
-
-
     const [{ user }, dispatch] = useStateValue();
 
     return (
