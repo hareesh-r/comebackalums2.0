@@ -21,7 +21,7 @@ function Login() {
     return (
         <div className="login">
             <div className="login__logo">
-                <img src="https://github.com/hareesh-r/comebackalums2.0/blob/master/src/img/come-back-logo.png" alt="come back logo here" />
+                <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/img/come-back-logo.png" alt="come back logo here" />
                 <h1>ComeBack</h1>
             </div>
             <Button type="submit" onClick={signIn}>

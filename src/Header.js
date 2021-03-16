@@ -20,7 +20,7 @@ function Header() {
     return (
         <div className="header">
             <div className="header__left">
-                <img src="https://github.com/hareesh-r/comebackalums2.0/blob/master/src/img/come-back-logo.png" alt="Comback logo here" />
+                <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/img/come-back-logo.png" alt="Comback logo here" />
                 <div className="header__input">
                     <SearchIcon />
                     <input placeholder="    Search Alumini" type="text"></input>

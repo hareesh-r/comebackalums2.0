@@ -42,9 +42,6 @@ function PostHere() {
                     <button onClick={handleSubmit} type="submit">Hidden Submit</button>
                 </form>
             </div>
-            <div className="postHere__boottom">
-
-            </div>
         </div>
     )
 }
