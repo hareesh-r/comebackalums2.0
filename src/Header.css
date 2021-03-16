@@ -128,3 +128,7 @@
         display: none;
     }
 }
+.header__center > Link,.header__center > a {
+    text-decoration: none;
+    display: flex;
+}

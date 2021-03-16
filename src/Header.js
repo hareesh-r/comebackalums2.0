@@ -12,6 +12,7 @@ import ForumIcon from "@material-ui/icons/Forum";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from './StateProvider';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -27,46 +28,54 @@ function Header() {
                 </div>
             </div>
             <div className="header__center">
-                <div className="header__option header__option--active">
-                    <div className="icons">
-                        <HomeIcon fontSize="large" />
-                    </div><div className="icon-name">HOME</div>
-                </div>
-                <div className="header__option">
+                <Link to="/">
+                    <div className="header__option header__option--active">
+                        <div className="icons">
+                            <HomeIcon fontSize="large" />
+                        </div><div className="icon-name">HOME</div>
+                    </div>
+                </Link>
+                <Link to="/about">
+                    <div className="header__option">
                         <div className="icons">
                             <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
-                </div>
-                <div className="header__option">
-                    <div className="icons">
-                        <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMINI LIST</div>
-                </div>
-                <div className="header__option">
-                    <div className="icons">
-                        <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMINI APPLICATION</div>
-                </div>
-                <div className="header__option">
-                    <div className="icons">
-                        <ContactMailIcon fontSize="large" /> </div><div className="icon-name">CONTACT</div>
-                </div>
-
+                    </div>
+                </Link>
+                <Link to="/aliminilist">
+                    <div className="header__option">
+                        <div className="icons">
+                            <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMINI LIST</div>
+                    </div></Link>
+                <Link to="/apply">
+                    <div className="header__option">
+                        <div className="icons">
+                            <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMINI APPLICATION</div>
+                    </div>
+                </Link>
+                <Link to="/contact">
+                    <div
+                        className="header__option">
+                        <ContactMailIcon fontSize="large" /><div className="icon-name">CONTACT</div>
+                    </div>
+                </Link>
             </div>
             <div className="header__right">
                 <div className="header__info">
                     <Avatar src={user.photoURL} />
                     <h4>{user.displayName}</h4>
                     <div className="header__infoIcons">
-                    <IconButton>
-                        <AddIcon />
-                    </IconButton>
-                    <IconButton>
-                        <ForumIcon />
-                    </IconButton>
-                    <IconButton>
-                        <NotificationsActiveIcon />
-                    </IconButton>
-                    <IconButton>
-                        <ExpandMoreIcon />
-                    </IconButton>
+                        <IconButton>
+                            <AddIcon />
+                        </IconButton>
+                        <IconButton>
+                            <ForumIcon />
+                        </IconButton>
+                        <IconButton>
+                            <NotificationsActiveIcon />
+                        </IconButton>
+                        <IconButton>
+                            <ExpandMoreIcon />
+                        </IconButton>
                     </div>
                 </div>
             </div>
