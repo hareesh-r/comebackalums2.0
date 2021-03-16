@@ -3,3 +3,9 @@
     justify-content: center;
     margin: 0px 10px 10px 10px;
 }
+@media only screen and (max-width: 768px) {
+    .showOff{
+        flex-direction: column;
+        align-items: center;
+    }
+}  

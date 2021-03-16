@@ -46,3 +46,12 @@ p {
     font-weight: 400;
     line-height: 2;
 }
+
+@media only screen and (max-width: 768px) {
+    .about {
+      flex-direction: column;
+    }
+    .about__right ,.about__left{
+        width: 90%;
+    }
+  }

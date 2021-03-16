@@ -65,7 +65,11 @@
 .header__option .icon-name {
     padding: 10px;
 }
-
+@media only screen and (max-width: 768px) {
+    .icon-name{
+        display: none;
+    }
+}
 
 
 .header__option {

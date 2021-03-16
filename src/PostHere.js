@@ -39,7 +39,7 @@ function PostHere() {
                     <input
                         value={imageUrl}
                         onChange={(e) => setImageUrl(e.target.value)} placeholder="image url (Optional)" />
-                    <button onClick={handleSubmit} type="submit">Hidden Submit</button>
+                    <button onClick={handleSubmit} type="submit">Post</button>
                 </form>
             </div>
         </div>
