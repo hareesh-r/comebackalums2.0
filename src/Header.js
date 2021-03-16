@@ -28,7 +28,7 @@ function Header() {
                 </div>
             </div>
             <div className="header__center">
-                <Link to="/">
+                <Link to="/home">
                     <div className="header__option header__option--active">
                         <div className="icons">
                             <HomeIcon fontSize="large" />
@@ -41,7 +41,7 @@ function Header() {
                             <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
                     </div>
                 </Link>
-                <Link to="/aliminilist">
+                <Link to="/aluminilist">
                     <div className="header__option">
                         <div className="icons">
                             <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMINI LIST</div>

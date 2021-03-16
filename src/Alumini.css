@@ -1,0 +1,49 @@
+.alumini {
+    padding: 60px 10px 10px 10px;
+    background-color: #efefef;
+    max-width: 250px;
+    margin: 30px;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.id-card img {
+    top: -25%;
+    position: absolute;
+    left: calc(25%);
+    border: 10px solid #fff;
+} 
+.id-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+}
+.alumini__name_designation > h3 {
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+}
+
+.alumini__name_designation span {
+    font-size: 12px;
+    color: red;
+
+}
+
+blockquote {
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.alumini:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.alumini__name_designation{
+    display: flex;
+    flex-direction: column;
+}

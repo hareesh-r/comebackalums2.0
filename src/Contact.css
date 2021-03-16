@@ -1,0 +1,98 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(180deg, white,purple, red);
+}
+
+.contact__touch{
+    margin: 10px;
+    text-align: center;
+    background-color: #eef;
+    width: 300px;
+    border-radius: 999px;
+}
+
+.contact__adress {
+    background-color: white;
+    width: 80%;
+    margin: 10px 50px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 30px;
+    max-width: 600px;
+}
+
+.contact__follow {
+    display: flex;
+    background-color: white;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px 50px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 600px;
+
+}
+
+.contact__mail {
+    background-color: white;
+    width: 80%;
+    margin: 10px 50px;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 600px;
+}
+
+.contact__phone {
+    background-color: white;
+    width: 80%;
+    margin: 10px 50px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 30px;
+    max-width: 600px;
+
+}
+.contact__phone:hover,.contact__mail:hover,.contact__follow:hover,.contact__adress:hover{
+    background-color: black;
+}
+.contact__phone:hover strong,.contact__mail:hover strong,.contact__follow:hover strong,.contact__adress:hover strong{
+    color: red;
+}
+.contact__phone:hover p,.contact__mail:hover p,.contact__follow:hover p,.contact__adress:hover p{
+    color: white;
+}
+.contact__phone:hover .MuiSvgIcon-root,.contact__mail:hover .MuiSvgIcon-root,.contact__adress:hover .MuiSvgIcon-root{
+    color: red;
+}
+.contact__follow:hover .MuiSvgIcon-root{
+    color: white;
+}
+.icon_linked:hover .MuiSvgIcon-root{
+    color: rgb(0, 174, 255);
+}.icon_whats:hover .MuiSvgIcon-root{
+    color: rgb(0, 255, 64);
+}.icon_insta:hover .MuiSvgIcon-root{
+    color: rgb(212, 66, 205);
+}.icon_fb:hover .MuiSvgIcon-root{
+    color: rgb(0, 119, 255);
+}.icon_yt:hover .MuiSvgIcon-root{
+    color: rgb(255, 0, 0);
+}.icon_tweet:hover .MuiSvgIcon-root{
+    color: rgb(0, 255, 255);
+}
+
+
+
+
+
+
+
+
+
+
+/* https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80 */

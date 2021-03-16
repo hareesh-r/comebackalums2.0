@@ -1,0 +1,13 @@
+.aluminilist__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+@media (max-width: 660px) {
+    .aluminilist__body {
+        display: flex;
+        flex-direction: column;
+    }
+}
