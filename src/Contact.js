@@ -18,13 +18,16 @@ function Contact() {
             <h1>Get in Touch</h1>
             </div>
             <div className="contact__adress">
-                <LocationOnIcon /> <strong>Address </strong> <p>RSM Nagar, Kavaraipettai, Gummidipoondi Taluk, Tiruvallur District, Tamil Nadu, India. Pin code: 601 206.</p>
+                <div className="contact__adress__heading">
+                <LocationOnIcon /> <strong>Address </strong> </div><p>RSM Nagar, Kavaraipettai, Gummidipoondi Taluk, Tiruvallur District,<br /> Tamil Nadu, India. Pin code: 601 206.</p>
             </div>
             <div className="contact__phone">
-                <PhoneIcon /> <strong>Phone</strong> <p>+91 917-6969-473</p>
+            <div className="contact__phone__heading">
+                <PhoneIcon /> <strong>Phone</strong></div> <p>+91 917-6969-473</p>
             </div>
             <div className="contact__mail">
-                <MailIcon /> <strong>Email</strong>
+            <div className="contact__mail__heading">
+                <MailIcon /> <strong>Email</strong></div>
                 <p>hareeshprogrammer@gmail.com</p>
             </div>
             <div className="contact__follow">
