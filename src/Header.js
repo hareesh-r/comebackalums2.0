@@ -14,10 +14,18 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { actionTypes } from './reducer';
 
 function Header() {
 
     const [{ user }, dispatch] = useStateValue();
+
+    const signOut = () => {
+        dispatch({
+            type: actionTypes.RESET_USER,
+            user: null,
+        });
+    }
 
     return (
         <div className="header">
@@ -65,20 +73,15 @@ function Header() {
                     <Avatar src={user.photoURL} />
                     <h4>{user.displayName}</h4>
                     <div className="header__infoIcons">
-                        {/* <IconButton>
-                            <AddIcon />
-                        </IconButton> */}
                         <IconButton>
                             <ForumIcon />
                         </IconButton>
                         {/* <IconButton>
                             <NotificationsActiveIcon />
                         </IconButton> */}
-                        <Link to="/login">
                             <IconButton>
-                                <ExitToAppIcon />
+                                <ExitToAppIcon onClick={signOut} />
                             </IconButton>
-                        </Link>
                     </div>
                 </div>
             </div>

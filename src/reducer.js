@@ -1,9 +1,10 @@
 export const initialState = {
-    user: "Hareesh",
+    user: null,
 };
 
 export const actionTypes = {
     SET_USER: "SET_USER",
+    RESET_USER: "RESET_USER",
 };
 
 const reducer = (state , action ) => {
@@ -13,6 +14,11 @@ const reducer = (state , action ) => {
             return{
                 ...state,
                 user: action.user,
+            };
+        case actionTypes.RESET_USER:
+            return{
+                ...state,
+                user: null,
             };
 
         default:

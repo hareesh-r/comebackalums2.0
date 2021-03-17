@@ -126,7 +126,16 @@
     .header__info{
         visibility:hidden;
         display: none;
-    }
+    }.header__option:hover {
+        color: red;
+        background-color: none;
+        border-radius: 0px;
+        align-items: center;
+        padding: 0 0px;
+        border-bottom: none;
+        }.header__option {
+            padding: 0px 5px;
+        }
 }
 .header__center > Link,.header__center > a {
     text-decoration: none;
