@@ -48,22 +48,21 @@ function Apply() {
                     <br />
                     <br />
                     <br />
-                    <br />
-                    <br />
+                    <h1>Please Enter Your Details Here</h1>
+                            <h3>Kindly Copy and Paste your image link </h3>
                     <div className="apply__inputs">
-
                             <input
                                 value={message}
                                 onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial , ${user.displayName}`} type="text"  />
 
                             <input
                                 value={imageUrl}
-                                onChange={(e) => setImageUrl(e.target.value)} placeholder={`URL of your ${user.displayName}'s image`} type="text"  />
+                                onChange={(e) => setImageUrl(e.target.value)} placeholder={`URL of ${user.displayName}'s image`} type="text"  />
 
 
                             <input
                                 value={aluminiName}
-                                onChange={(e) => setAluminiName(e.target.value)} placeholder={`Your Real Name , ${user.displayName}`} type="text"  />
+                                onChange={(e) => setAluminiName(e.target.value)} placeholder={`Real Name of ${user.displayName}`} type="text"  />
 
 
                             <input
@@ -72,7 +71,7 @@ function Apply() {
 
                             <input
                                 value={designation}
-                                onChange={(e) => setDesignation(e.target.value)} placeholder="Your Designation please" type="text"  />
+                                onChange={(e) => setDesignation(e.target.value)} placeholder="Company and Designation" type="text"  />
 
                             <input
                                 value={regNo}
