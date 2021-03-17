@@ -4,6 +4,7 @@ import "./Login.css";
 import { auth, provider } from "./firebase";
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
+import { Link } from 'react-router-dom';
 
 function Login() {
 
@@ -23,11 +24,11 @@ function Login() {
     return (
         <div className="login">
             <div className="login__logo">
-                <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/img/come-back-logo.png" alt="come back logo here" />
+                <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/com%20back%20logo.png" alt="come back logo here" />
                 <h1>ComeBack</h1>
             </div>
             <Button type="submit" onClick={signIn}>
-                Sign In
+                    Sign In
             </Button>
         </div>
     )

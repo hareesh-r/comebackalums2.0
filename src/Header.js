@@ -13,6 +13,7 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Header() {
 
@@ -21,7 +22,7 @@ function Header() {
     return (
         <div className="header">
             <div className="header__left">
-                <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/img/come-back-logo.png" alt="Comback logo here" />
+                <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/com%20back%20logo.png" alt="Comback logo here" />
                 <div className="header__input">
                     <SearchIcon />
                     <input placeholder="    Search Alumini" type="text"></input>
@@ -64,18 +65,20 @@ function Header() {
                     <Avatar src={user.photoURL} />
                     <h4>{user.displayName}</h4>
                     <div className="header__infoIcons">
-                        <IconButton>
+                        {/* <IconButton>
                             <AddIcon />
-                        </IconButton>
+                        </IconButton> */}
                         <IconButton>
                             <ForumIcon />
                         </IconButton>
-                        <IconButton>
+                        {/* <IconButton>
                             <NotificationsActiveIcon />
-                        </IconButton>
-                        <IconButton>
-                            <ExpandMoreIcon />
-                        </IconButton>
+                        </IconButton> */}
+                        <Link to="/login">
+                            <IconButton>
+                                <ExitToAppIcon />
+                            </IconButton>
+                        </Link>
                     </div>
                 </div>
             </div>
