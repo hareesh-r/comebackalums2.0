@@ -9,10 +9,11 @@ function AluminiList() {
     const [aluminis , setAluminis] = useState([]);
 
     useEffect(() => {
-        db.collection("aluminis").orderBy("cgpa","desc").onSnapshot((snapshot) =>
+        db.collection("aluminis").where("profilePic", "!=","").orderBy("profilePic","desc").onSnapshot((snapshot) =>
         setAluminis(snapshot.docs.map((doc) =>({id: doc.id,data: doc.data()})))
         );
     },[]);
+
     return (
         <div className="aluminilist">
             <Header />
