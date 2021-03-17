@@ -6,7 +6,7 @@ import Header from './Header';
 
 
 function Apply() {
-    const [{user} , dispatch] = useStateValue();
+    const [{ user }, dispatch] = useStateValue();
 
     const [message, setMessage] = useState("");
     const [imageUrl, setImageUrl] = useState("");
@@ -23,9 +23,9 @@ function Apply() {
             message: message,
             profilePic: imageUrl,
             aluminiName: aluminiName,
-            cgpa : CGPA,
+            cgpa: CGPA,
             designation: designation,
-            regNo : regNo,
+            regNo: regNo,
         });
 
         setMessage("");
@@ -39,33 +39,70 @@ function Apply() {
         <div className="apply">
             <Header />
             <div className="apply__top">
-
+                {/* <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/3255337.jpg" alt=""/> */}
                 <form>
-                    <input
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial , ${user.displayName}`} type="text" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div className="apply__inputs">
 
-                    <input
-                        value={imageUrl}
-                        onChange={(e) => setImageUrl(e.target.value)} placeholder={`URL of your Image , ${user.displayName}`} type="text" />
+                            <input
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial , ${user.displayName}`} type="text"  />
 
-                    <input
-                        value={aluminiName}
-                        onChange={(e) => setAluminiName(e.target.value)} placeholder={`Your Real Name , ${user.displayName}`} type="text" />
+                            <input
+                                value={imageUrl}
+                                onChange={(e) => setImageUrl(e.target.value)} placeholder={`URL of your ${user.displayName}'s image`} type="text"  />
 
-                    <input
-                        value={CGPA}
-                        onChange={(e) => setCGPA(e.target.value)} placeholder={`CGPA while passing, ${user.displayName}`} type="text" />
 
-                    <input
-                        value={designation}
-                        onChange={(e) => setDesignation(e.target.value)} placeholder="Your Designation please" />
+                            <input
+                                value={aluminiName}
+                                onChange={(e) => setAluminiName(e.target.value)} placeholder={`Your Real Name , ${user.displayName}`} type="text"  />
 
-                    <input
-                        value={regNo}
-                        onChange={(e) => setRegNo(e.target.value)} placeholder="Your Registration Number" />
 
-                    <button onClick={handleSubmit} type="submit">Publish</button>
+                            <input
+                                value={CGPA}
+                                onChange={(e) => setCGPA(e.target.value)} placeholder={`CGPA while passing`} type="text"  />
+
+                            <input
+                                value={designation}
+                                onChange={(e) => setDesignation(e.target.value)} placeholder="Your Designation please" type="text"  />
+
+                            <input
+                                value={regNo}
+                                onChange={(e) => setRegNo(e.target.value)} placeholder="Your Registration Number" type="text"  />
+
+                            <button onClick={handleSubmit} type="submit">Publish</button>
+
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                 </form>
             </div>
         </div>
