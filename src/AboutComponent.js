@@ -1,5 +1,6 @@
 import React from 'react'
 import About from './About'
+import Contact from './Contact'
 import Header from './Header'
 
 function AboutComponent() {
@@ -7,6 +8,7 @@ function AboutComponent() {
         <div>
             <Header />
             <About />
+            <Contact />
         </div>
     )
 }

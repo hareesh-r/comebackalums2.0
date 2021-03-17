@@ -1,19 +1,18 @@
 import React from "react";
 import './App.css';
-import Header from "./Header";
-import About from "./About";
-import Feed from "./Feed";
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Contact from "./Contact";
 import Home from "./Home";
 import ContactComponent from "./ContactComponent";
 import AboutComponent from "./AboutComponent";
 import AluminiList from "./AluminiList";
+import Apply from "./Apply";
 
 function App() {
+
   const [{ user }, dispatch] = useStateValue();
+
   return (
     <Router>
       <Switch>
@@ -22,11 +21,12 @@ function App() {
             <Route path="/" component={Login} />
           ) : (
             <>
-              <Route path="/about" component={AboutComponent} />
-              <Route path="/contact" component={ContactComponent} />
-              <Route path="/aluminilist" component={AluminiList} />
-              <Route path="/home" component={Home} />
-              <Route path="/" component={Home} />
+              <Route exact path="/about" component={AboutComponent} />
+              <Route exact path="/contact" component={ContactComponent} />
+              <Route exact path="/aluminilist" component={AluminiList} />
+              <Route exact path="/apply" component={Apply} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/" component={Home} />
             </>
           )
           }

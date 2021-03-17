@@ -6,15 +6,17 @@ import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
 
 function Login() {
+
     const [state , dispatch] = useStateValue();
 
     const signIn = () => {
         // clever stuff
         auth.signInWithPopup(provider)
             .then((result) => {
+
                 dispatch({
                         type: actionTypes.SET_USER,
-                        user: result.user,
+                        user: result.user, 
                     });
             }).catch((error) => alert(error.message));
     }
