@@ -1,5 +1,9 @@
 ::placeholder {
     text-align : center;
+}
+.apply__inputs > ::-webkit-input-placeholder 
+{
+    text-align : center;
     color: white;
 }
 .apply{
