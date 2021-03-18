@@ -28,6 +28,7 @@ function Apply() {
             designation: designation,
             regNo: regNo,
             contactLink: contactLink,
+            applicant: user.displayName,
         });
 
         setMessage("");
@@ -37,6 +38,7 @@ function Apply() {
         setDesignation("");
         setRegNo("");
         setContactLink("");
+
     };
     return (
         <div className="apply">

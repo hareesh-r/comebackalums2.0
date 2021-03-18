@@ -39,32 +39,32 @@ function Header() {
             </div>
             <div className="header__center">
                 <Link to="/home">
-                    <div className="header__option header__option--active">
+                    <div className="header__option ">
                         <div className="icons">
                             <HomeIcon fontSize="large" />
                         </div><div className="icon-name">HOME</div>
                     </div>
                 </Link>
                 <Link to="/about">
-                    <div className="header__option">
+                    <div className="header__option ">
                         <div className="icons">
                             <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
                     </div>
                 </Link>
                 <Link to="/aluminilist">
-                    <div className="header__option">
+                    <div className="header__option ">
                         <div className="icons">
                             <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMINI LIST</div>
                     </div></Link>
                 <Link to="/apply">
-                    <div className="header__option">
+                    <div className="header__option ">
                         <div className="icons">
                             <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMINI APPLICATION</div>
                     </div>
                 </Link>
                 <Link to="/contact">
                     <div
-                        className="header__option">
+                        className="header__option   ">
                         <ContactMailIcon fontSize="large" /><div className="icon-name">CONTACT</div>
                     </div>
                 </Link>

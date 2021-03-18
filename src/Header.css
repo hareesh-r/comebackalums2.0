@@ -54,13 +54,6 @@
     color: red;
 }
 
-.header__option--active>.MuiSvgIcon-root {
-    color: red;
-}
-
-.header__option--active {
-    border-bottom: 4px solid red;
-}
 
 .header__option .icon-name {
     padding: 10px;
@@ -78,11 +71,12 @@
 
 .header__option:hover {
     color: red;
-    background-color: #eff2f5;
+    /* background-color: #eff2f5;
     border-radius: 50px;
     align-items: center;
     padding: 0 30px;
-    border-bottom: none;
+    border-bottom: none; */
+    border-bottom: 4px solid red;
 }
 
 .header__info {
@@ -135,6 +129,10 @@
         }.header__option {
             padding: 0px 5px;
         }
+}@media only screen and (max-width: 611px) {
+    .header__input input{
+    width: 7px;
+    }
 }
 .header__center > Link,.header__center > a {
     text-decoration: none;
