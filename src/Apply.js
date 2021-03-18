@@ -53,7 +53,7 @@ function Apply() {
                     <div className="apply__inputs">
                             <input
                                 value={message}
-                                onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial , ${user.displayName}`} type="text"  />
+                                onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial about College , ${user.displayName}`} type="text"  />
 
                             <input
                                 value={imageUrl}

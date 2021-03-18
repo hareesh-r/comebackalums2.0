@@ -28,8 +28,11 @@
     background-color:rgba(0, 0, 0,0.6);
     cursor: pointer;
     color: white;
+    outline-width: 0px;
 }
-
+.apply__inputs input:hover{
+    background-color: black;
+}
 
 .apply__inputs input:focus{
     background-color: black;
@@ -55,6 +58,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+    }h1,h3{
+        text-align: center;
     }
 }.apply h3,.apply h1 {
     margin: 20px;
