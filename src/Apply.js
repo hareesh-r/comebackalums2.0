@@ -39,7 +39,6 @@ function Apply() {
         <div className="apply">
             <Header />
             <div className="apply__top">
-                {/* <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/3255337.jpg" alt=""/> */}
                 <form>
                     <br />
                     <br />

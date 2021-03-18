@@ -1,19 +1,29 @@
 .alumini {
-    padding: 60px 10px 10px 10px;
+    padding: 10px 10px 10px 60px;
     background-color: #efefef;
-    max-width: 250px;
+    min-width: 400px;
+    max-width: 400px;
     margin: 30px;
     position: relative;
-    margin-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 70px;
 }
-
 .id-card img {
-    top: -25%;
     position: absolute;
-    left: calc(25%);
+    top: 15%;
+    left: calc(-10%);
     border: 10px solid #fff;
 } 
+@media (max-width: 660px) {
+    .alumini {
+        padding: 60px 10px 10px 10px;
+    }
+    .id-card img {
+        top: -25%;
+        position: absolute;
+        left: calc(35%);
+        border: 10px solid #fff;
+    }
+}
 .id-card img {
     width: 120px;
     height: 120px;

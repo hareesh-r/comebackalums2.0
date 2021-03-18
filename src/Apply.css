@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin-left: 30px;
 }
 .apply__inputs input{
     border: none;
@@ -63,6 +64,6 @@
         text-align: center;
     }
 }.apply h3,.apply h1 {
-    margin: 20px;
+    margin: 40px;
     color: black;
 }
