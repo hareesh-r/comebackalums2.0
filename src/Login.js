@@ -4,11 +4,10 @@ import "./Login.css";
 import { auth, provider } from "./firebase";
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
-import { Link } from 'react-router-dom';
 
 function Login() {
 
-    const [state , dispatch] = useStateValue();
+    const [state, dispatch] = useStateValue();
 
     const signIn = () => {
         // clever stuff
@@ -16,9 +15,9 @@ function Login() {
             .then((result) => {
 
                 dispatch({
-                        type: actionTypes.SET_USER,
-                        user: result.user, 
-                    });
+                    type: actionTypes.SET_USER,
+                    user: result.user,
+                });
             }).catch((error) => alert(error.message));
     }
     return (
@@ -28,7 +27,7 @@ function Login() {
                 <h1>ComeBack</h1>
             </div>
             <Button type="submit" onClick={signIn}>
-                    Sign In
+                Sign In
             </Button>
         </div>
     )

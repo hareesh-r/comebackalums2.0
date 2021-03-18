@@ -5,6 +5,7 @@
     text-align: center;
     flex-direction: column;
 }
+
 @media (max-width: 660px) {
     .aluminilist__body {
         display: flex;

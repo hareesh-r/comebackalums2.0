@@ -49,9 +49,11 @@ p {
 
 @media only screen and (max-width: 768px) {
     .about {
-      flex-direction: column;
+        flex-direction: column;
     }
-    .about__right ,.about__left{
+
+    .about__right,
+    .about__left {
         width: 90%;
     }
-  }
+}

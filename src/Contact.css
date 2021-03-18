@@ -7,7 +7,7 @@
     background-image: linear-gradient(180deg, white, red);
 }
 
-.contact__touch{
+.contact__touch {
     margin: 10px;
     text-align: center;
     background-color: #eef;
@@ -57,35 +57,65 @@
     max-width: 600px;
 
 }
-.contact__phone:hover,.contact__mail:hover,.contact__follow:hover,.contact__adress:hover{
+
+.contact__phone:hover,
+.contact__mail:hover,
+.contact__follow:hover,
+.contact__adress:hover {
     background-color: black;
 }
-.contact__phone:hover strong,.contact__mail:hover strong,.contact__follow:hover strong,.contact__adress:hover strong{
+
+.contact__phone:hover strong,
+.contact__mail:hover strong,
+.contact__follow:hover strong,
+.contact__adress:hover strong {
     color: red;
 }
-.contact__phone:hover p,.contact__mail:hover p,.contact__follow:hover p,.contact__adress:hover p{
+
+.contact__phone:hover p,
+.contact__mail:hover p,
+.contact__follow:hover p,
+.contact__adress:hover p {
     color: white;
 }
-.contact__phone:hover .MuiSvgIcon-root,.contact__mail:hover .MuiSvgIcon-root,.contact__adress:hover .MuiSvgIcon-root{
+
+.contact__phone:hover .MuiSvgIcon-root,
+.contact__mail:hover .MuiSvgIcon-root,
+.contact__adress:hover .MuiSvgIcon-root {
     color: red;
 }
-.contact__follow:hover .MuiSvgIcon-root{
+
+.contact__follow:hover .MuiSvgIcon-root {
     color: white;
 }
-.icon_linked:hover .MuiSvgIcon-root{
+
+.icon_linked:hover .MuiSvgIcon-root {
     color: rgb(0, 174, 255);
-}.icon_whats:hover .MuiSvgIcon-root{
+}
+
+.icon_whats:hover .MuiSvgIcon-root {
     color: rgb(0, 255, 64);
-}.icon_insta:hover .MuiSvgIcon-root{
+}
+
+.icon_insta:hover .MuiSvgIcon-root {
     color: rgb(212, 66, 205);
-}.icon_fb:hover .MuiSvgIcon-root{
+}
+
+.icon_fb:hover .MuiSvgIcon-root {
     color: rgb(0, 119, 255);
-}.icon_yt:hover .MuiSvgIcon-root{
+}
+
+.icon_yt:hover .MuiSvgIcon-root {
     color: rgb(255, 0, 0);
-}.icon_tweet:hover .MuiSvgIcon-root{
+}
+
+.icon_tweet:hover .MuiSvgIcon-root {
     color: rgb(0, 255, 255);
 }
-.contact__adress__heading,.contact__mail__heading,.contact__phone__heading{
+
+.contact__adress__heading,
+.contact__mail__heading,
+.contact__phone__heading {
     display: flex;
     justify-content: center;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Alumini.css"
 
-function Alumini({ profilePic,contactLink, message, aluminiName, regNo, cgpa, designation }) {
+function Alumini({ profilePic, contactLink, message, aluminiName, regNo, cgpa, designation }) {
     return (
         <div className="alumini">
             <a href={contactLink} target="__blank">

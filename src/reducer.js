@@ -7,16 +7,16 @@ export const actionTypes = {
     RESET_USER: "RESET_USER",
 };
 
-const reducer = (state , action ) => {
+const reducer = (state, action) => {
     console.log(action);
-    switch(action.type){
+    switch (action.type) {
         case actionTypes.SET_USER:
-            return{
+            return {
                 ...state,
                 user: action.user,
             };
         case actionTypes.RESET_USER:
-            return{
+            return {
                 ...state,
                 user: null,
             };

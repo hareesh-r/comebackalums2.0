@@ -7,20 +7,24 @@
     position: relative;
     margin-top: 70px;
 }
+
 .alumini a {
     text-decoration: none;
     color: #000;
 }
+
 .id-card img {
     position: absolute;
     top: 15%;
     left: calc(-15%);
     border: 10px solid #fff;
-} 
+}
+
 @media (max-width: 660px) {
     .alumini {
         padding: 60px 10px 10px 10px;
     }
+
     .id-card img {
         top: -25%;
         position: absolute;
@@ -28,13 +32,15 @@
         border: 10px solid #fff;
     }
 }
+
 .id-card img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
 
 }
-.alumini__name_designation > h3 {
+
+.alumini__name_designation>h3 {
     font-size: 20px;
     color: blue;
     text-align: center;
@@ -57,7 +63,8 @@ blockquote {
     cursor: pointer;
     transition: 0.3s;
 }
-.alumini__name_designation{
+
+.alumini__name_designation {
     display: flex;
     flex-direction: column;
 }

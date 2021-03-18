@@ -81,10 +81,13 @@
     background: #eff2f5;
     transition: transform 100ms ease-in;
 }
+
 @media only screen and (max-width: 768px) {
-    .post__option > p {
+    .post__option>p {
         display: none;
-    }.post{
+    }
+
+    .post {
         margin: 10px 20px;
     }
 }

@@ -7,7 +7,7 @@ function ContactComponent() {
     return (
         <div className="contactComponent">
             <div className="contactComponent__header">
-            <Header /></div>
+                <Header /></div>
             <Contact />
         </div>
     )

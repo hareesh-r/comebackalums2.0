@@ -7,10 +7,7 @@ import ListAltIcon from '@material-ui/icons/ListAlt';
 import CreateIcon from '@material-ui/icons/Create';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import { Avatar, IconButton } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
 import ForumIcon from "@material-ui/icons/Forum";
-import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
@@ -77,12 +74,9 @@ function Header() {
                         <IconButton>
                             <ForumIcon />
                         </IconButton>
-                        {/* <IconButton>
-                            <NotificationsActiveIcon />
-                        </IconButton> */}
-                            <IconButton>
-                                <ExitToAppIcon onClick={signOut} />
-                            </IconButton>
+                        <IconButton>
+                            <ExitToAppIcon onClick={signOut} />
+                        </IconButton>
                     </div>
                 </div>
             </div>

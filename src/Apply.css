@@ -1,23 +1,27 @@
 ::placeholder {
-    text-align : center;
+    text-align: center;
 }
-.apply__inputs > ::-webkit-input-placeholder 
-{
-    text-align : center;
+
+.apply__inputs> ::-webkit-input-placeholder {
+    text-align: center;
     color: white;
 }
-.apply{
+
+.apply {
     background-image: url("https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/3255338.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}.apply__inputs{
+}
+
+.apply__inputs {
     display: flex;
     flex-direction: column;
     align-items: left;
     margin-left: 30px;
 }
-.apply__inputs input{
+
+.apply__inputs input {
     border: none;
     justify-content: center;
     border-radius: 10px;
@@ -25,45 +29,56 @@
     margin: 10px;
     width: 80%;
     max-width: 500px;
-    text-align : center;
-    background-color:rgba(0, 0, 0,0.6);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     color: white;
     outline-width: 0px;
 }
-.apply__inputs input:hover{
+
+.apply__inputs input:hover {
     background-color: black;
 }
 
-.apply__inputs input:focus{
+.apply__inputs input:focus {
     background-color: black;
 }
-.apply__inputs button{
+
+.apply__inputs button {
     padding: 10px;
     margin: 10px;
     background-color: red;
     border-radius: 999px;
     width: 150px;
 }
-.apply__inputs button:hover{
+
+.apply__inputs button:hover {
     background-color: rgb(75, 240, 75);
 }
 
-@media only screen and (max-width: 768px){
-    .apply{
+@media only screen and (max-width: 768px) {
+    .apply {
         background-image: url("https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/3255337.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
-    }.apply__inputs{
+    }
+
+    .apply__inputs {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }h1,h3{
+    }
+
+    h1,
+    h3 {
         text-align: center;
     }
-}.apply h3,.apply h1 {
+}
+
+.apply h3,
+.apply h1 {
     margin: 40px;
     color: black;
 }
