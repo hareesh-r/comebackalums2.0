@@ -27,6 +27,7 @@ function AluminiList() {
                 aluminiName={alumini.data.aluminiName}
                 cgpa={alumini.data.cgpa}
                 designation={alumini.data.designation}
+                contactLink={alumini.data.contactLink}
                 />
             ))}
             </div>

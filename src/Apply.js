@@ -14,6 +14,7 @@ function Apply() {
     const [CGPA, setCGPA] = useState("");
     const [designation, setDesignation] = useState("");
     const [regNo, setRegNo] = useState("");
+    const [contactLink, setContactLink] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,6 +27,7 @@ function Apply() {
             cgpa: CGPA,
             designation: designation,
             regNo: regNo,
+            contactLink: contactLink,
         });
 
         setMessage("");
@@ -34,6 +36,7 @@ function Apply() {
         setCGPA("");
         setDesignation("");
         setRegNo("");
+        setContactLink("");
     };
     return (
         <div className="apply">
@@ -48,35 +51,39 @@ function Apply() {
                     <br />
                     <br />
                     <h1>Please Enter Your Details Here</h1>
-                            <h3>Kindly Copy and Paste your image link </h3>
+                    <h3>Kindly Copy and Paste your image link </h3>
                     <div className="apply__inputs">
-                            <input
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial about College , ${user.displayName}`} type="text"  />
+                        <input
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)} placeholder={`Your Testimonial about College , ${user.displayName}`} type="text" />
 
-                            <input
-                                value={imageUrl}
-                                onChange={(e) => setImageUrl(e.target.value)} placeholder={`URL of ${user.displayName}'s image`} type="text"  />
-
-
-                            <input
-                                value={aluminiName}
-                                onChange={(e) => setAluminiName(e.target.value)} placeholder={`Real Name of ${user.displayName}`} type="text"  />
+                        <input
+                            value={imageUrl}
+                            onChange={(e) => setImageUrl(e.target.value)} placeholder={`URL of ${user.displayName}'s image`} type="text" />
 
 
-                            <input
-                                value={CGPA}
-                                onChange={(e) => setCGPA(e.target.value)} placeholder={`CGPA while passing`} type="text"  />
+                        <input
+                            value={aluminiName}
+                            onChange={(e) => setAluminiName(e.target.value)} placeholder={`Real Name of ${user.displayName}`} type="text" />
 
-                            <input
-                                value={designation}
-                                onChange={(e) => setDesignation(e.target.value)} placeholder="Company and Designation" type="text"  />
 
-                            <input
-                                value={regNo}
-                                onChange={(e) => setRegNo(e.target.value)} placeholder="Your Registration Number" type="text"  />
+                        <input
+                            value={CGPA}
+                            onChange={(e) => setCGPA(e.target.value)} placeholder={`CGPA while passing`} type="text" />
 
-                            <button onClick={handleSubmit} type="submit">Publish</button>
+                        <input
+                            value={designation}
+                            onChange={(e) => setDesignation(e.target.value)} placeholder="Company and Designation" type="text" />
+
+                        <input
+                            value={regNo}
+                            onChange={(e) => setRegNo(e.target.value)} placeholder="Your Registration Number" type="text" />
+
+                        <input
+                            value={contactLink}
+                            onChange={(e) => setContactLink(e.target.value)} placeholder="Contact (Any links , linkedin , fb , insta...)" type="text" />
+
+                        <button onClick={handleSubmit} type="submit">Publish</button>
 
                     </div>
                     <br />

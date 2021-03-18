@@ -7,10 +7,14 @@
     position: relative;
     margin-top: 70px;
 }
+.alumini a {
+    text-decoration: none;
+    color: #000;
+}
 .id-card img {
     position: absolute;
     top: 15%;
-    left: calc(-10%);
+    left: calc(-15%);
     border: 10px solid #fff;
 } 
 @media (max-width: 660px) {
