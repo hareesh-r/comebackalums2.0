@@ -14,7 +14,6 @@ function PostHere() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // database manupulation pending
         db.collection("posts").add({
             message: input,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),

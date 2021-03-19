@@ -12,7 +12,6 @@ import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { actionTypes } from './reducer';
-import Search from './Search';
 
 function Header() {
 

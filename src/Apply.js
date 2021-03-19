@@ -19,7 +19,6 @@ function Apply() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // database manupulation pending
         db.collection("aluminis").add({
             message: message,
             profilePic: imageUrl,
@@ -45,10 +44,6 @@ function Apply() {
             <Header />
             <div className="apply__top">
                 <form>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
                     <br />
                     <br />
                     <br />

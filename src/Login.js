@@ -4,7 +4,6 @@ import "./Login.css";
 import { auth, provider } from "./firebase";
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
-import firebase from "firebase";
 
 function Login() {
 
@@ -29,7 +28,7 @@ function Login() {
                 <h1>ComeBack</h1>
             </div>
             <Button type="submit" onClick={signIn}>
-                Sign In
+            Sign In with<img src="https://img.icons8.com/plasticine/2x/google-logo.png" />
             </Button>
         </div>
     )

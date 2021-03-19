@@ -6,7 +6,7 @@
 
 .login>button {
     top: -50%;
-    width: 50%;
+    width: 80%;
     background-color: red;
     color: white;
     font-weight: 700;
@@ -29,4 +29,7 @@
     font-size: 4rem;
     font-weight: 600;
     color: red;
+}
+.login img{
+    width: 32px;
 }
