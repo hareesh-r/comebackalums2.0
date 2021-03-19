@@ -135,11 +135,11 @@
 
     .header__option:hover {
         color: red;
-        background-color: none;
+        /* background-color: none;
         border-radius: 0px;
         align-items: center;
-        padding: 0 0px;
-        border-bottom: none;
+        padding: 0 0px; */
+        border-bottom: 4px solid red;
     }
 
     .header__option {

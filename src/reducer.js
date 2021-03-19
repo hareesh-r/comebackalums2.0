@@ -1,5 +1,5 @@
 export const initialState = {
-    user: null,
+    user: JSON.parse(localStorage.getItem("name")),
 };
 
 export const actionTypes = {
@@ -8,7 +8,6 @@ export const actionTypes = {
 };
 
 const reducer = (state, action) => {
-    console.log(action);
     switch (action.type) {
         case actionTypes.SET_USER:
             return {
@@ -23,7 +22,7 @@ const reducer = (state, action) => {
 
         default:
             return state;
-    }
+        }
 };
 
 export default reducer;

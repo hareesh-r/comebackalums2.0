@@ -6,6 +6,7 @@ import "./AluminiList.css";
 import Contact from './Contact';
 
 function Search({ searchName }) {
+    
     const [aluminis, setAluminis] = useState([]);
 
     useEffect(() => {

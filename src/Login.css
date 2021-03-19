@@ -5,6 +5,7 @@
 }
 
 .login>button {
+    top: -50%;
     width: 50%;
     background-color: red;
     color: white;

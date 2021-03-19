@@ -26,10 +26,12 @@
     }
 
     .id-card img {
-        top: -25%;
+        top: -70px;
         position: absolute;
         left: calc(35%);
+        border-radius: 150px 150px 0 0; 
         border: 10px solid #fff;
+        border-radius: 150px 150px 0 0; 
     }
 }
 
