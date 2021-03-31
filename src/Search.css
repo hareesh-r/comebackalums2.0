@@ -17,10 +17,13 @@
     display: flex;
     align-items: center;
     background-color: #e1dbdb;
+    width: 80%;
+    max-width: 900px;
     padding: 10px;
     margin-left: 10px;
     border-radius: 50px;
     text-decoration: none;
+    justify-content: space-between;
 }
 .search__input>input , .search__input button {
     border: none;
@@ -42,4 +45,10 @@
 }
 .search__input ::-webkit-input-placeholder {
     text-align: center;
+}
+.search__input>input {
+    width: 100%;
+}
+#namebtn{
+    background-color: red;
 }

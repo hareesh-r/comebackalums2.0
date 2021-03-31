@@ -6,20 +6,53 @@ import "./Search.css";
 import Contact from './Contact';
 import SearchIcon from '@material-ui/icons/Search';
 
-
+var searchBy = "name";
 
 function Search() {
 
     const [aluminis, setAluminis] = useState([]);
     const [searchName, setSearch] = useState("");
-
+    var background_nm;
+    var background_ds;
+    const setName = () => {
+        searchBy = "name";
+        console.log("setName " + searchBy);
+        background_nm = document.getElementById("namebtn").style.backgroundColor;
+        if (background_nm === "red") {
+            document.getElementById("namebtn").style.background = "white";
+            document.getElementById("desbtn").style.background = "red";
+        } else {
+            document.getElementById("namebtn").style.background = "red";
+            document.getElementById("desbtn").style.background = "white";
+        }
+    }
+    const setDes = () => {
+        searchBy = "des";
+        console.log("setDes " + searchBy);
+        background_ds = document.getElementById("desbtn").style.backgroundColor;
+        if (background_ds === "red") {
+            document.getElementById("desbtn").style.background = "white";
+            document.getElementById("namebtn").style.background = "red";
+        } else {
+            document.getElementById("desbtn").style.background = "red";
+            document.getElementById("namebtn").style.background = "white";
+        }
+    }
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        console.log(searchName);
-        db.collection("aluminis")
-            .where("aluminiName", "==",searchName).onSnapshot((snapshot) =>
-                setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+
+        console.log(searchBy);
+        if (searchBy === "des") {
+            db.collection("aluminis")
+                .where("designation", "==", searchName).onSnapshot((snapshot) =>
+                    setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+        }
+        else if (searchBy === "name") {
+            db.collection("aluminis")
+                .where("aluminiName", "==", searchName).onSnapshot((snapshot) =>
+                    setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+        }
         setSearch("");
 
     };
@@ -35,17 +68,15 @@ function Search() {
             <Header />
             <br />
             <br />
-            <br />
             <div className="search__body">
                 <div className="search__input">
-                <input type="text" placeholder="Search Alumini" value={searchName}
-                    onChange={(e) => setSearch(e.target.value)} />
-                <button onClick={handleSubmit} type="submit"><SearchIcon /></button>
+                    <input type="text" placeholder="Search Alumini" value={searchName}
+                        onChange={(e) => setSearch(e.target.value)} />
+                    <button onClick={handleSubmit} type="submit"><SearchIcon /></button>
                 </div>
+                <h5>Search by: <button id="namebtn" onClick={setName}>Name</button><button id="desbtn" onClick={setDes}>Designation</button></h5>
                 <br />
-                <br />
-                <br />
-                
+
                 {aluminis.map((alumini) => (
                     <Alumini className="search__alumini"
                         key={alumini.id}
