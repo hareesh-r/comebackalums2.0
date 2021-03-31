@@ -52,3 +52,8 @@
 #namebtn{
     background-color: red;
 }
+.searchBy__btn{
+    border-radius: 999px;
+    margin: 10px;
+    outline-width: 0;
+}

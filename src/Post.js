@@ -5,6 +5,7 @@ import React from 'react'
 import "./Post.css";
 
 function Post({ profilePic, image, username, timestamp, message }) {
+    let URL = "whatsapp://send?text=Post shared from comebackalums.web.app \'"+message+"\'";
     return (
         <div className="post">
             <div className="post__top">
@@ -33,8 +34,9 @@ function Post({ profilePic, image, username, timestamp, message }) {
                     <p>Comment</p>
                 </div>
                 <div className="post__option">
+                    <a href={URL} >
                     <NearMe />
-                    <p>Share</p>
+                    <p>Share</p></a>
                 </div>
                 <div className="post__option">
                     <AccountCircle />

@@ -16,7 +16,6 @@ function Search() {
     var background_ds;
     const setName = () => {
         searchBy = "name";
-        console.log("setName " + searchBy);
         background_nm = document.getElementById("namebtn").style.backgroundColor;
         if (background_nm === "red") {
             document.getElementById("namebtn").style.background = "white";
@@ -28,7 +27,6 @@ function Search() {
     }
     const setDes = () => {
         searchBy = "des";
-        console.log("setDes " + searchBy);
         background_ds = document.getElementById("desbtn").style.backgroundColor;
         if (background_ds === "red") {
             document.getElementById("desbtn").style.background = "white";
@@ -41,8 +39,6 @@ function Search() {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-
-        console.log(searchBy);
         if (searchBy === "des") {
             db.collection("aluminis")
                 .where("designation", "==", searchName).onSnapshot((snapshot) =>
@@ -74,7 +70,7 @@ function Search() {
                         onChange={(e) => setSearch(e.target.value)} />
                     <button onClick={handleSubmit} type="submit"><SearchIcon /></button>
                 </div>
-                <h5>Search by: <button id="namebtn" onClick={setName}>Name</button><button id="desbtn" onClick={setDes}>Designation</button></h5>
+                <h5>Search by: <button className="searchBy__btn" id="namebtn" onClick={setName}>Name</button><button id="desbtn" className="searchBy__btn" onClick={setDes}>Designation</button></h5>
                 <br />
 
                 {aluminis.map((alumini) => (
