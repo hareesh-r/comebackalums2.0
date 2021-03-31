@@ -30,10 +30,13 @@ function Header() {
         <div className="header">
             <div className="header__left">
                 <img src="https://raw.githubusercontent.com/hareesh-r/comebackalums2.0/master/src/image/com%20back%20logo.png" alt="Comback logo here" />
-                <div className="header__input">
-                    <SearchIcon />
-                    <input placeholder="Search Alumini    " type="text"></input>
-                </div>
+                <Link to="/search">
+                    <div className="header__input">
+                        <SearchIcon />
+                        <input placeholder="Search Alumini    " type="text">
+                        </input>
+                    </div>
+                </Link>
             </div>
             <div className="header__center">
                 <Link to="/home">

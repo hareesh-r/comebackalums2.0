@@ -18,10 +18,13 @@
     background-color: white;
     color: red;
 }
-
-.login>div>img {
+.login img{
+    width: 32px;
+}
+.login__logo img {
     object-fit: contain;
     height: 200px;
+    width: 200px;
     margin-left: 17%;
 }
 
@@ -29,7 +32,4 @@
     font-size: 4rem;
     font-weight: 600;
     color: red;
-}
-.login img{
-    width: 32px;
 }

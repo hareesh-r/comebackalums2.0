@@ -30,6 +30,7 @@
     padding: 10px;
     margin-left: 10px;
     border-radius: 50px;
+    text-decoration: none;
 }
 
 .header__left>img {
@@ -40,6 +41,7 @@
     border: none;
     background-color: transparent;
     outline-width: 0;
+    text-decoration: none;
 }
 
 .header__center {

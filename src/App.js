@@ -8,6 +8,7 @@ import ContactComponent from "./ContactComponent";
 import AboutComponent from "./AboutComponent";
 import AluminiList from "./AluminiList";
 import Apply from "./Apply";
+import Search from "./Search";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
               <Route exact path="/contact" component={ContactComponent} />
               <Route exact path="/aluminilist" component={AluminiList} />
               <Route exact path="/apply" component={Apply} />
+              <Route exact path="/search" component={Search} />
               <Route exact path="/home" component={Home} />
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
