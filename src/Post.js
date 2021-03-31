@@ -4,8 +4,8 @@ import { ChatBubbleOutline } from '@material-ui/icons';
 import React from 'react'
 import "./Post.css";
 
-function Post({ profilePic, image, username, timestamp, message }) {
-    let URL = "whatsapp://send?text=Post shared from comebackalums.web.app \'"+message+"\'";
+function Post({ profilePic, image, username, timestamp, message,likeCount }) {
+    let URL = "whatsapp://send?text=Post shared from comebackalums.web.app *"+message+"*";
     return (
         <div className="post">
             <div className="post__top">
@@ -26,8 +26,8 @@ function Post({ profilePic, image, username, timestamp, message }) {
 
             <div className="post__options">
                 <div className="post__option">
-                    <ThumbUp />
-                    <p>Like</p>
+                    <ThumbUp /> {" "+likeCount}
+                    <p>Likes</p>
                 </div>
                 <div className="post__option">
                     <ChatBubbleOutline />

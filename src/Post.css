@@ -91,3 +91,21 @@
         margin: 10px 20px;
     }
 }
+.post__option a{
+    text-decoration: none;
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+    width: 100%;
+    align-items: center;
+}
+.post__option a:hover{
+    border-radius: 100px;
+    color: red;
+    border-radius: 50px;
+    background: #eff2f5;
+    transition: transform 100ms ease-in;
+}

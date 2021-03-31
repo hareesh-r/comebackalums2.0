@@ -20,6 +20,7 @@ function PostHere() {
             profilePic: user.photoURL,
             username: user.displayName,
             image: imageUrl,
+            likeCount: 0,
 
         });
 
