@@ -39,16 +39,40 @@ function Search() {
     const handleSubmit = (e) => {
 
         e.preventDefault();
+
         if (searchBy === "des") {
-            db.collection("aluminis")
-                .where("designation", "==", searchName).onSnapshot((snapshot) =>
-                    setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            // db.collection("aluminis")
+            //     .where("designation", "==", searchName).onSnapshot((snapshot) =>
+            //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            db.collection("aluminis").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    doc.data().designation.split(" ").forEach((partName) => {
+                        if (partName == searchName) {
+                            console.log("match found " + doc.data().designation);
+                            db.collection("aluminis").where("aluminiName", "==", doc.data().designation).onSnapshot((snapshot) =>
+                                setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+                        }
+                    });
+                });
+            });
         }
         else if (searchBy === "name") {
-            db.collection("aluminis")
-                .where("aluminiName", "==", searchName).onSnapshot((snapshot) =>
-                    setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            // db.collection("aluminis")
+            //     .where("aluminiName", "==", searchName).onSnapshot((snapshot) =>
+            //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            db.collection("aluminis").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    doc.data().aluminiName.split(" ").forEach((partName) => {
+                        if (partName == searchName) {
+                            console.log("match found "+doc.data().aluminiName);
+                            db.collection("aluminis").where("aluminiName", "==", doc.data().aluminiName).onSnapshot((snapshot) =>
+                                setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+                        }
+                    });
+                });
+            });
         }
+
         setSearch("");
 
     };

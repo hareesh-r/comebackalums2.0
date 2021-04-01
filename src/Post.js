@@ -1,9 +1,12 @@
 import { Avatar } from '@material-ui/core';
-import { AccountCircle, ExpandMoreOutlined, NearMe, ThumbUp } from '@material-ui/icons';
+import { NearMe, ThumbUp } from '@material-ui/icons';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { ChatBubbleOutline } from '@material-ui/icons';
 import React from 'react'
 import "./Post.css";
 import db from './firebase';
+import { useStateValue } from './StateProvider';
+import { actionTypes } from './reducer';
 
 let isLiked = "0";
 
@@ -17,7 +20,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
             db.collection("posts").doc(id).update({ "likeCount": likeCount + 1 });
             document.getElementById(like).style.color = "red";
         }
-        else if (isLiked == "1") {
+        else {
             isLiked = "0";
             db.collection("posts").doc(id).update({ "likeCount": likeCount - 1 });
             document.getElementById(like).style.color = "grey";
@@ -26,6 +29,17 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
     }
 
     let URL = "whatsapp://send?text=Post shared from comebackalums.web.app *" + message + "*";
+
+    const [{ user }, dispatch] = useStateValue();
+
+    const signOut = () => {
+
+        localStorage.clear();
+        dispatch({
+            type: actionTypes.RESET_USER,
+            user: null,
+        });
+    }
 
     return (
         <div className="post">
@@ -60,8 +74,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
                         <p>Share</p></a>
                 </div>
                 <div className="post__option">
-                    <AccountCircle />
-                    <ExpandMoreOutlined />
+                    <ExitToAppIcon onClick={signOut} />
                 </div>
             </div>
         </div>

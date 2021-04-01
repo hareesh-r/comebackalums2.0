@@ -93,7 +93,6 @@
 }
 .post__option a{
     text-decoration: none;
-    border-top: 1px solid lightgray;
     display: flex;
     justify-content: space-evenly;
     font-size: medium;
