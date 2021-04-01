@@ -3,9 +3,30 @@ import { AccountCircle, ExpandMoreOutlined, NearMe, ThumbUp } from '@material-ui
 import { ChatBubbleOutline } from '@material-ui/icons';
 import React from 'react'
 import "./Post.css";
+import db from './firebase';
 
-function Post({ profilePic, image, username, timestamp, message,likeCount }) {
-    let URL = "whatsapp://send?text=Post shared from comebackalums.web.app *"+message+"*";
+let isLiked = "0";
+
+function Post({ id, profilePic, image, username, timestamp, message, likeCount }) {
+
+    let like = "like" + id;
+
+    let increase = () => {
+        if (isLiked == "0") {
+            isLiked = "1";
+            db.collection("posts").doc(id).update({ "likeCount": likeCount + 1 });
+            document.getElementById(like).style.color = "red";
+        }
+        else if (isLiked == "1") {
+            isLiked = "0";
+            db.collection("posts").doc(id).update({ "likeCount": likeCount - 1 });
+            document.getElementById(like).style.color = "grey";
+
+        }
+    }
+
+    let URL = "whatsapp://send?text=Post shared from comebackalums.web.app *" + message + "*";
+
     return (
         <div className="post">
             <div className="post__top">
@@ -25,8 +46,8 @@ function Post({ profilePic, image, username, timestamp, message,likeCount }) {
             </div>
 
             <div className="post__options">
-                <div className="post__option">
-                    <ThumbUp /> {" "+likeCount}
+                <div id={like} className="post__option">
+                    <ThumbUp onClick={increase} /> {likeCount}
                     <p>Likes</p>
                 </div>
                 <div className="post__option">
@@ -35,8 +56,8 @@ function Post({ profilePic, image, username, timestamp, message,likeCount }) {
                 </div>
                 <div className="post__option">
                     <a href={URL} >
-                    <NearMe />
-                    <p>Share</p></a>
+                        <NearMe />
+                        <p>Share</p></a>
                 </div>
                 <div className="post__option">
                     <AccountCircle />
@@ -48,3 +69,4 @@ function Post({ profilePic, image, username, timestamp, message,likeCount }) {
 }
 
 export default Post
+
