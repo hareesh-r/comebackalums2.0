@@ -74,13 +74,6 @@
     margin-left: 10px;
 }
 
-.post__option:hover {
-    border-radius: 100px;
-    color: red;
-    border-radius: 50px;
-    background: #eff2f5;
-    transition: transform 100ms ease-in;
-}
 
 @media only screen and (max-width: 768px) {
     .post__option>p {
@@ -94,17 +87,15 @@
 .post__option a{
     text-decoration: none;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: medium;
     color: gray;
     cursor: pointer;
     width: 100%;
     align-items: center;
-}
-.post__option a:hover{
-    border-radius: 100px;
+}.post__option a:hover{
     color: red;
-    border-radius: 50px;
-    background: #eff2f5;
-    transition: transform 100ms ease-in;
+}
+.post__option .MuiSvgIcon-root{
+    margin-right: 10px;
 }

@@ -41,39 +41,55 @@ function Search() {
         e.preventDefault();
 
         if (searchBy === "des") {
-            // db.collection("aluminis")
-            //     .where("designation", "==", searchName).onSnapshot((snapshot) =>
-            //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            let newData = [];
+            let refinedNames = [];
+
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     doc.data().designation.split(" ").forEach((partName) => {
                         if (partName == searchName) {
-                            console.log("match found " + doc.data().designation);
-                            db.collection("aluminis").where("aluminiName", "==", doc.data().designation).onSnapshot((snapshot) =>
+                            newData.push(db.collection("aluminis").where("designation", "==", doc.data().designation));
+                            refinedNames.push(doc.data().designation);
+                            db.collection("aluminis").where("designation", "==", doc.data().designation).onSnapshot((snapshot) =>
                                 setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
                         }
                     });
                 });
             });
-        }
-        else if (searchBy === "name") {
-            // db.collection("aluminis")
-            //     .where("aluminiName", "==", searchName).onSnapshot((snapshot) =>
+            // refinedNames.forEach((searchQuery) => {
+            //     db.collection("aluminis").where("designation", "==", searchQuery).onSnapshot((snapshot) =>
             //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            // });
+            console.log(refinedNames);
+            console.log(newData);
+        }
+
+        else if (searchBy === "name") {
+            let newData = [];
+            let refinedNames = [];
+
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     doc.data().aluminiName.split(" ").forEach((partName) => {
                         if (partName == searchName) {
-                            console.log("match found "+doc.data().aluminiName);
+                            newData.push(db.collection("aluminis").where("aluminiName", "==", doc.data().aluminiName));
+                            refinedNames.push(doc.data().aluminiName);
                             db.collection("aluminis").where("aluminiName", "==", doc.data().aluminiName).onSnapshot((snapshot) =>
                                 setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
                         }
                     });
                 });
             });
+            // refinedNames.forEach((searchQuery) => {
+            //     db.collection("aluminis").where("aluminiName", "==", searchQuery).onSnapshot((snapshot) =>
+            //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            // });
+            console.log(refinedNames);
+            console.log(newData);
         }
-
         setSearch("");
+
+
 
     };
 
@@ -108,6 +124,7 @@ function Search() {
                         designation={alumini.data.designation}
                     />
                 ))}
+
             </div>
             <Contact />
         </div>

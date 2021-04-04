@@ -1,29 +1,47 @@
 import { Avatar } from '@material-ui/core';
-import { NearMe, ThumbUp } from '@material-ui/icons';
+import { NearMe, ThumbDown, ThumbUp } from '@material-ui/icons';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { ChatBubbleOutline } from '@material-ui/icons';
 import React from 'react'
 import "./Post.css";
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
 
-let isLiked = "0";
-
 function Post({ id, profilePic, image, username, timestamp, message, likeCount }) {
 
     let like = "like" + id;
 
+    let isLiked = "0";
+
     let increase = () => {
-        if (isLiked == "0") {
+        if (isLiked === "0") {
             isLiked = "1";
             db.collection("posts").doc(id).update({ "likeCount": likeCount + 1 });
             document.getElementById(like).style.color = "red";
+            document.getElementById(dislike).style.color = "grey";
         }
-        else {
+        else if(isLiked === "1") {
             isLiked = "0";
             db.collection("posts").doc(id).update({ "likeCount": likeCount - 1 });
             document.getElementById(like).style.color = "grey";
+            document.getElementById(dislike).style.color = "red";
+
+        }
+    }
+    let dislike = "dislike" + id;
+
+    let decrease = () => {
+        if (isLiked === "0") {
+            isLiked = "1";
+            db.collection("posts").doc(id).update({ "likeCount": likeCount - 1 });
+            document.getElementById(dislike).style.color = "red";
+            document.getElementById(like).style.color = "grey";
+        }
+        else if(isLiked === "1") {
+            isLiked = "0";
+            db.collection("posts").doc(id).update({ "likeCount": likeCount + 1 });
+            document.getElementById(dislike).style.color = "grey";
+            document.getElementById(like).style.color = "red";
 
         }
     }
@@ -62,11 +80,11 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
             <div className="post__options">
                 <div id={like} className="post__option">
                     <ThumbUp onClick={increase} /> {likeCount}
-                    <p>Likes</p>
+                    <p>Like</p>
                 </div>
-                <div className="post__option">
-                    <ChatBubbleOutline />
-                    <p>Comment</p>
+                <div id={dislike} className="post__option">
+                    <ThumbDown onClick={decrease} />
+                    <p>Remove Like</p>
                 </div>
                 <div className="post__option">
                     <a href={URL} >
@@ -74,7 +92,8 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
                         <p>Share</p></a>
                 </div>
                 <div className="post__option">
-                    <ExitToAppIcon onClick={signOut} />
+                    <a>
+                    <ExitToAppIcon onClick={signOut} /></a>
                 </div>
             </div>
         </div>
