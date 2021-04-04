@@ -25,15 +25,19 @@
     text-decoration: none;
     justify-content: space-between;
 }
-.search__input>input , .search__input button {
+
+.search__input>input,
+.search__input button {
     border: none;
     background-color: transparent;
     outline-width: 0;
     text-decoration: none;
 }
-.search__input button{
+
+.search__input button {
     color: black;
 }
+
 .search__input {
     display: flex;
     align-items: center;
@@ -43,16 +47,20 @@
     border-radius: 50px;
     text-decoration: none;
 }
+
 .search__input ::-webkit-input-placeholder {
     text-align: center;
 }
+
 .search__input>input {
     width: 100%;
 }
-#namebtn{
+
+#namebtn {
     background-color: red;
 }
-.searchBy__btn{
+
+.searchBy__btn {
     border-radius: 999px;
     margin: 10px;
     outline-width: 0;

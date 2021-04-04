@@ -22,10 +22,9 @@ function About() {
             <div className="about__left">
                 <h2 className="bout">About Us</h2>
                 <h3>Comback</h3>
-                <p>Is an online portal for alumini of the colleges to share their
-                    experience also help other students with what they have done for what they have achieved<br />
-                Hey Alumini out there Grab this opportunity to become ispiration to lot of students.<br />
-                Share Your Achievements here with what you have achieved through your college.<br />
+                <p>Would be an online platform for college alumni to talk about their experiences as well as to encourage other students regarding what they have accomplished.
+                Hello there, Alumni! Take advantage of this opportunity to inspire a large number of students.
+                Share what you've accomplished during your college career in this segment.<br />
                     <strong>How ?</strong> Just click on the <strong>Alumini Application</strong> <CreateIcon /> and proceed.<br />
                     <strong>Not an alumini ?</strong> Look for mentors here like who you want to become.<br />
                 Simple as that just click on <strong>Alumini List</strong> <ListAltIcon /> to see the list of alumini.<br /></p>

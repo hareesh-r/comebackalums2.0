@@ -18,7 +18,7 @@ function Header() {
     const [{ user }, dispatch] = useStateValue();
 
     const signOut = () => {
-        
+
         localStorage.clear();
         dispatch({
             type: actionTypes.RESET_USER,

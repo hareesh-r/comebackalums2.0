@@ -20,7 +20,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
             document.getElementById(like).style.color = "red";
             document.getElementById(dislike).style.color = "grey";
         }
-        else if(isLiked === "1") {
+        else if (isLiked === "1") {
             isLiked = "0";
             db.collection("posts").doc(id).update({ "likeCount": likeCount - 1 });
             document.getElementById(like).style.color = "grey";
@@ -37,7 +37,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
             document.getElementById(dislike).style.color = "red";
             document.getElementById(like).style.color = "grey";
         }
-        else if(isLiked === "1") {
+        else if (isLiked === "1") {
             isLiked = "0";
             db.collection("posts").doc(id).update({ "likeCount": likeCount + 1 });
             document.getElementById(dislike).style.color = "grey";
@@ -93,7 +93,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
                 </div>
                 <div className="post__option">
                     <a>
-                    <ExitToAppIcon onClick={signOut} /></a>
+                        <ExitToAppIcon onClick={signOut} /></a>
                 </div>
             </div>
         </div>

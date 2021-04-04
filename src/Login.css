@@ -18,9 +18,11 @@
     background-color: white;
     color: red;
 }
-.login img{
+
+.login img {
     width: 32px;
 }
+
 .login__logo img {
     object-fit: contain;
     height: 200px;

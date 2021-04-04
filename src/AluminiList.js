@@ -10,7 +10,7 @@ function AluminiList() {
 
     useEffect(() => {
         db.collection("aluminis").orderBy("cgpa", "desc").onSnapshot((snapshot) =>
-        setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+            setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
     }, []);
 
     return (

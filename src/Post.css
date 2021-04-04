@@ -84,12 +84,14 @@
         margin: 10px 20px;
     }
 }
+
 @media only screen and (max-width: 1149px) {
     .post__option p {
         display: none;
     }
 }
-.post__option a{
+
+.post__option a {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -98,9 +100,12 @@
     cursor: pointer;
     width: 100%;
     align-items: center;
-}.post__option a:hover{
+}
+
+.post__option a:hover {
     color: red;
 }
-.post__option .MuiSvgIcon-root{
+
+.post__option .MuiSvgIcon-root {
     margin-right: 10px;
 }

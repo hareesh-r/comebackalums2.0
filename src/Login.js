@@ -13,14 +13,14 @@ function Login() {
     const signIn = () => {
         auth.signInWithPopup(provider)
             .then((result) => {
-                localStorage.setItem("name",JSON.stringify(result.user));
+                localStorage.setItem("name", JSON.stringify(result.user));
 
                 dispatch({
                     type: actionTypes.SET_USER,
                     user: result.user,
                 });
             }).catch((error) => alert(error.message));
-    }   
+    }
 
     return (
         <div className="login">
@@ -29,7 +29,7 @@ function Login() {
                 <h1>ComeBack</h1>
             </div>
             <Button type="submit" onClick={signIn}>
-            Sign In with<img src="https://img.icons8.com/plasticine/2x/google-logo.png" />
+                Sign In with<img src="https://img.icons8.com/plasticine/2x/google-logo.png" />
             </Button>
             <Footer />
         </div>
