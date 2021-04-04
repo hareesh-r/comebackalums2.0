@@ -10,6 +10,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import Footer from './Footer';
 
 function Contact() {
     return (
@@ -54,6 +55,7 @@ function Contact() {
                         <TwitterIcon />
                     </a></div>
             </div>
+            <Footer />
         </div>
     )
 }

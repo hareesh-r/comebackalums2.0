@@ -1,6 +1,8 @@
 import React from 'react'
 import "./About.css";
 import ProgressBar from "./Progressbar";
+import CreateIcon from '@material-ui/icons/Create';
+import ListAltIcon from '@material-ui/icons/ListAlt';
 
 
 const testData = [
@@ -24,9 +26,9 @@ function About() {
                     experience also help other students with what they have done for what they have achieved<br />
                 Hey Alumini out there Grab this opportunity to become ispiration to lot of students.<br />
                 Share Your Achievements here with what you have achieved through your college.<br />
-                    <strong>How ?</strong> Just click on the Alumini Application and proceed.<br />
+                    <strong>How ?</strong> Just click on the <strong>Alumini Application</strong> <CreateIcon /> and proceed.<br />
                     <strong>Not an alumini ?</strong> Look for mentors here like who you want to become.<br />
-                Simple as that just click on Alumini List to see the list of alumini.<br /></p>
+                Simple as that just click on <strong>Alumini List</strong> <ListAltIcon /> to see the list of alumini.<br /></p>
             </div>
             <div className="about__right">
                 {testData.map((item, idx) => (

@@ -3,6 +3,7 @@ import db from './firebase';
 import "./Apply.css";
 import { useStateValue } from './StateProvider';
 import Header from './Header';
+import Footer from './Footer';
 
 
 function Apply() {
@@ -107,6 +108,7 @@ function Apply() {
                     <br />
                 </form>
             </div>
+            <Footer />
         </div>
     )
 }

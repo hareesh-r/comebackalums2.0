@@ -4,6 +4,7 @@ import "./Login.css";
 import { auth, provider } from "./firebase";
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
+import Footer from './Footer';
 
 function Login() {
 
@@ -30,6 +31,7 @@ function Login() {
             <Button type="submit" onClick={signIn}>
             Sign In with<img src="https://img.icons8.com/plasticine/2x/google-logo.png" />
             </Button>
+            <Footer />
         </div>
     )
 }

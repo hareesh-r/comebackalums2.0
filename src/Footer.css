@@ -1,0 +1,9 @@
+.footer p{
+    justify-content: center;
+    text-align: center;
+}.footer{
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
