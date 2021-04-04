@@ -15,11 +15,11 @@ function PostHere() {
         e.preventDefault();
 
         db.collection("posts").add({
-            message: input,
+            message: input.trim(),
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            profilePic: user.photoURL,
-            username: user.displayName,
-            image: imageUrl,
+            profilePic: user.photoURL.trim(),
+            username: user.displayName.trim(),
+            image: imageUrl.trim(),
             likeCount: 0,
 
         });
