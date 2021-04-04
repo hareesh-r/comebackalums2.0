@@ -18,7 +18,7 @@ function Header() {
     const [{ user }, dispatch] = useStateValue();
 
     const signOut = () => {
-
+        
         localStorage.clear();
         dispatch({
             type: actionTypes.RESET_USER,
@@ -33,7 +33,7 @@ function Header() {
                 <Link to="/search">
                     <div className="header__input">
                         <SearchIcon />
-                        <input placeholder="Search Alumini    " type="text">
+                        <input placeholder="Search alumni    " type="text">
                         </input>
                     </div>
                 </Link>
@@ -55,12 +55,12 @@ function Header() {
                 <Link to="/aluminilist">
                     <div className="header__option ">
                         <div className="icons">
-                            <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMINI LIST</div>
+                            <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMNI LIST</div>
                     </div></Link>
                 <Link to="/apply">
                     <div className="header__option ">
                         <div className="icons">
-                            <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMINI APPLICATION</div>
+                            <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMNI APPLICATION</div>
                     </div>
                 </Link>
                 <Link to="/contact">

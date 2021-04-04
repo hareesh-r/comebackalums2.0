@@ -56,12 +56,6 @@ function Search() {
                     });
                 });
             });
-            // refinedNames.forEach((searchQuery) => {
-            //     db.collection("aluminis").where("designation", "==", searchQuery).onSnapshot((snapshot) =>
-            //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
-            // });
-            console.log(refinedNames);
-            console.log(newData);
         }
 
         else if (searchBy === "name") {
@@ -80,12 +74,6 @@ function Search() {
                     });
                 });
             });
-            // refinedNames.forEach((searchQuery) => {
-            //     db.collection("aluminis").where("aluminiName", "==", searchQuery).onSnapshot((snapshot) =>
-            //         setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
-            // });
-            console.log(refinedNames);
-            console.log(newData);
         }
         setSearch("");
 

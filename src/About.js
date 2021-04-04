@@ -7,7 +7,7 @@ import ListAltIcon from '@material-ui/icons/ListAlt';
 
 const testData = [
     { bgcolor: "#c70000", completed: 100, title_text: "Total percent of Students" },
-    { bgcolor: "#c70000", completed: 80, title_text: "Alumini Found" },
+    { bgcolor: "#c70000", completed: 80, title_text: "Alumni Found" },
     { bgcolor: "#c70000", completed: 90, title_text: "Batch 2020" },
     { bgcolor: "#ff0000", completed: 32, title_text: "Batch 2019" },
     { bgcolor: "#ff0000", completed: 19, title_text: "Batch 2018" },
@@ -22,12 +22,12 @@ function About() {
             <div className="about__left">
                 <h2 className="bout">About Us</h2>
                 <h3>Comback</h3>
-                <p>Would be an online platform for college alumni to talk about their experiences as well as to encourage other students regarding what they have accomplished.
-                Hello there, Alumni! Take advantage of this opportunity to inspire a large number of students.
+                <p>Would be an online platform for college alumni to talk about their experiences as well as to encourage other students regarding what they have accomplished.<br />
+                Hello there, Alumni! Take advantage of this opportunity to inspire a large number of students.<br />
                 Share what you've accomplished during your college career in this segment.<br />
-                    <strong>How ?</strong> Just click on the <strong>Alumini Application</strong> <CreateIcon /> and proceed.<br />
-                    <strong>Not an alumini ?</strong> Look for mentors here like who you want to become.<br />
-                Simple as that just click on <strong>Alumini List</strong> <ListAltIcon /> to see the list of alumini.<br /></p>
+                    <strong>How ?</strong> Just click on the <strong>alumni Application</strong> <CreateIcon /> and proceed.<br />
+                    <strong>Not an Alumni ?</strong> Look for mentors here like who you want to become.<br />
+                Simple as that just click on <strong>Alumni List</strong> <ListAltIcon /> to see the list of alumni.<br /></p>
             </div>
             <div className="about__right">
                 {testData.map((item, idx) => (
