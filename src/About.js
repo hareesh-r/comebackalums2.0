@@ -25,6 +25,7 @@ function About() {
                 <p>Would be an online platform for college alumni to talk about their experiences as well as to encourage other students regarding what they have accomplished.<br />
                 Hello there, Alumni! Take advantage of this opportunity to inspire a large number of students.<br />
                 Share what you've accomplished during your college career in this segment.<br />
+                ComeBackAlums is one of the best alumni management software for all type of Universities, Colleges & Schools.<br /> With Cloud-based platform, connect your alumni all over the globe and boost their participation in alumni giving, alumni events and build a thriving alumni community.
                     <strong>How ?</strong> Just click on the <strong>Alumni Application</strong> <CreateIcon /> and proceed.<br />
                     <strong>Not an Alumni ?</strong> Look for mentors here like who you want to become.<br />
                 Simple as that just click on <strong>Alumni List</strong> <ListAltIcon /> to see the list of alumni.<br /></p>
