@@ -100,7 +100,6 @@ function Search() {
                 </div>
                 <h5>Search by: <button className="searchBy__btn" id="namebtn" onClick={setName}>Name</button><button id="desbtn" className="searchBy__btn" onClick={setDes}>Designation</button></h5>
                 <br />
-
                 {aluminis.map((alumini) => (
                     <Alumini className="search__alumini"
                         key={alumini.id}
@@ -110,6 +109,7 @@ function Search() {
                         aluminiName={alumini.data.aluminiName}
                         cgpa={alumini.data.cgpa}
                         designation={alumini.data.designation}
+                        contactLink={alumini.data.contactLink}
                     />
                 ))}
 
