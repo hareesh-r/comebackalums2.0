@@ -6,6 +6,7 @@ import "./Post.css";
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 function Post({ id, profilePic, image, username, timestamp, message, likeCount }) {
 
@@ -59,6 +60,21 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
         });
     }
 
+    let deletePost = () => {
+        console.log("post deleted");
+        if (username == user.displayName) {
+            if (window.confirm("Your post will be deleted")) {
+                db.collection("posts").doc(id).delete();
+                alert("Your post is successfully deleted");
+            } else {
+                console.log("post not deleted");
+            }
+        } else {
+            alert("You don't have permission to delete " + username + "'s post");
+        }
+    }
+
+
     return (
         <div className="post">
             <div className="post__top">
@@ -90,6 +106,9 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
                     <a href={URL} >
                         <NearMe />
                         <p>Share</p></a>
+                </div>
+                <div className="post__option post__option__delete">
+                    <DeleteIcon onClick={deletePost} />
                 </div>
                 <div className="post__option">
                     <a>
