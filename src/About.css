@@ -57,3 +57,7 @@ p {
         width: 90%;
     }
 }
+
+.about h3,.about h2,.about p{
+    text-align: left;
+}
