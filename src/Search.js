@@ -47,7 +47,7 @@ function Search() {
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     doc.data().designation.split(" ").forEach((partName) => {
-                        if (partName == searchName) {
+                        if (partName.toLowerCase() == searchName.toLowerCase()) {
                             newData.push(db.collection("aluminis").where("designation", "==", doc.data().designation));
                             refinedNames.push(doc.data().designation);
                             db.collection("aluminis").where("designation", "==", doc.data().designation).onSnapshot((snapshot) =>
