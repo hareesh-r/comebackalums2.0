@@ -2,7 +2,7 @@ import Contact from './Contact'
 import "./Threads.css";
 import Header from './Header'
 import { Avatar } from '@material-ui/core';
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import Thread from './Thread';
@@ -32,8 +32,8 @@ function Threads() {
     const [threads, setThreads] = useState([]);
 
     useEffect(() => {
-        db.collection("thread").orderBy("timestamp","desc").onSnapshot((snapshot) =>
-        setThreads(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
+        db.collection("thread").orderBy("timestamp", "desc").onSnapshot((snapshot) =>
+            setThreads(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
         );
     }, []);
 
@@ -53,7 +53,7 @@ function Threads() {
                     </form>
                 </div>
             </div>
-             {threads.map((singleThread) => (
+            {threads.map((singleThread) => (
                 <Thread
                     profilePic={singleThread.data.profilePic}
                     message={singleThread.data.message}

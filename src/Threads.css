@@ -1,6 +1,7 @@
-*{
+* {
     text-align: center;
 }
+
 .threads {
     display: flex;
     margin: 10px 20%;

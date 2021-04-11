@@ -151,8 +151,12 @@
     text-decoration: none;
     display: flex;
 }
-.header__infoIcons>Link , .header__infoIcons a {
+
+.header__infoIcons>Link,
+.header__infoIcons a {
     text-decoration: none;
-}.header__infoIcons>.MuiSvgIcon-root {
+}
+
+.header__infoIcons>.MuiSvgIcon-root {
     color: #787878;
 }

@@ -58,6 +58,8 @@ p {
     }
 }
 
-.about h3,.about h2,.about p{
+.about h3,
+.about h2,
+.about p {
     text-align: left;
 }

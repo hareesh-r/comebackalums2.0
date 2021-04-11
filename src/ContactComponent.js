@@ -18,8 +18,8 @@ function ContactComponent() {
                     <QuestionAnswerIcon />
                 </Link>
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <Contact />
         </div>
     )
