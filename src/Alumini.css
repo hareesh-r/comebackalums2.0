@@ -41,6 +41,13 @@
         padding: 60px 0px 10px 0px;
         min-width: 300px;
         max-width: 300px;
+    }.id-card img {
+        top: -70px;
+        position: absolute;
+        left: calc(27%);
+        border-radius: 150px 150px 0 0;
+        border: 10px solid #fff;
+        border-radius: 150px 150px 0 0;
     }
 }
 .id-card img {
