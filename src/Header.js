@@ -12,7 +12,7 @@ import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { actionTypes } from './reducer';
-import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
 function Header() {
 
@@ -77,8 +77,8 @@ function Header() {
                     <h4>{user.displayName}</h4>
                     <div className="header__infoIcons">
                         <IconButton>
-                            <Link to="/contact">
-                                <LiveHelpIcon />
+                            <Link to="/threads">
+                                <QuestionAnswerIcon />
                             </Link>
                         </IconButton>
                         <IconButton>

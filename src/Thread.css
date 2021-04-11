@@ -1,0 +1,111 @@
+.thread {
+    display: flex;
+    margin: 10px 25%;
+    flex-direction: column;
+    background-color: #eee;
+    border-radius: 15px;
+    box-shadow: 0px 9px 9px -9px rgba(0, 0, 0, 0.75);
+    align-items: center;
+}
+
+
+.thread__top {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.thread__avatar {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.thread__topInfo>h3 {
+    font-size: medium;
+    color: #000;
+    margin-bottom: 1px;
+    line-height: 0;
+    padding-bottom: 5px;
+}
+
+.thread__topInfo>p {
+    font-size: small;
+    color: red;
+    line-height: 0;
+}
+
+.thread__bottom {
+    padding: 0px 25px;
+}
+
+.thread__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 98%;
+}
+
+.thread__image>img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.thread__options {
+    border-top: 1px solid lightgray;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+    width: 100%;
+}
+
+.thread__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex: 1;
+}
+
+.thread__option>p {
+    margin-left: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .thread__option>p {
+        display: none;
+    }
+
+    .thread {
+        margin: 10px 20px;
+    }
+}
+
+@media only screen and (max-width: 1149px) {
+    .thread__option p {
+        display: none;
+    }
+}
+
+.thread__option a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: medium;
+    color: gray;
+    cursor: pointer;
+    width: 100%;
+    align-items: center;
+}
+
+.thread__option a:hover {
+    color: red;
+}
+
+.thread__option .MuiSvgIcon-root {
+    margin-right: 10px;
+}

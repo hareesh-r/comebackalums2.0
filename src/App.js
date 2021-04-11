@@ -9,6 +9,7 @@ import AboutComponent from "./AboutComponent";
 import AluminiList from "./AluminiList";
 import Apply from "./Apply";
 import Search from "./Search";
+import Threads from "./Threads";
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
               <Route exact path="/home" component={Home} />
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/threads" component={Threads} />
             </>
           )
           }
