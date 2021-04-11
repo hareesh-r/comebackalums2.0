@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 function Login() {
 
-    const [state, dispatch] = useStateValue();
+    const [dispatch] = useStateValue();
 
     const signIn = () => {
         auth.signInWithPopup(provider)
@@ -29,7 +29,7 @@ function Login() {
                 <h1>ComeBack</h1>
             </div>
             <Button type="submit" onClick={signIn}>
-                Sign In with<img src="https://img.icons8.com/plasticine/2x/google-logo.png" />
+                Sign In with<img src="https://img.icons8.com/plasticine/2x/google-logo.png" alt="Google" />
             </Button>
             <Footer />
         </div>

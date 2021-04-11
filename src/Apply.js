@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 
 function Apply() {
-    const [{ user }, dispatch] = useStateValue();
+    const [{ user }] = useStateValue();
 
     const [message, setMessage] = useState("");
     const [imageUrl, setImageUrl] = useState("");

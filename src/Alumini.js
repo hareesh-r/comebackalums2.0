@@ -7,7 +7,7 @@ function Alumini({ profilePic, contactLink, message, aluminiName, regNo, cgpa, d
             <div className="alumini">
                 <a href={contactLink} target="__blank">
                     <div className="id-card">
-                        <img src={profilePic} />
+                        <img src={profilePic} alt="Profile Here" />
                     </div>
                     <blockquote>❝ {message}
                         <br />RegNo : {regNo}

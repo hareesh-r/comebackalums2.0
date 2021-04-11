@@ -62,7 +62,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
 
     let deletePost = () => {
         console.log("post deleted");
-        if (username == user.displayName) {
+        if (username === user.displayName) {
             if (window.confirm("Your post will be deleted")) {
                 db.collection("posts").doc(id).delete();
                 alert("Your post is successfully deleted");
@@ -112,7 +112,8 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
                 </div>
                 <div className="post__option">
                     <a>
-                        <ExitToAppIcon onClick={signOut} /></a>
+                        <ExitToAppIcon onClick={signOut} />
+                    </a>
                 </div>
             </div>
         </div>

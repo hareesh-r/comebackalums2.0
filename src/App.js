@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './App.css';
 import Login from "./Login";
 import { useStateValue } from "./StateProvider";
@@ -13,7 +13,7 @@ import Threads from "./Threads";
 
 function App() {
 
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }] = useStateValue();
 
 
   return (
