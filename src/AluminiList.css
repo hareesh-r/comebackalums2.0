@@ -12,3 +12,55 @@
         flex-direction: column;
     }
 }
+
+.aluminilist__sort {
+    margin: 20px;
+    text-align: right;
+    margin-right: 30%;
+}
+
+.dropbtn {
+    background-color: grey;
+    color: white;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content button:hover {
+    background-color: red;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+.dropdown-content button {
+    width: 200px;
+}
