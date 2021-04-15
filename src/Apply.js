@@ -45,9 +45,6 @@ function Apply() {
             <Header />
             <div className="apply__top">
                 <form>
-                    <br />
-                    <br />
-                    <br />
                     <h1>Please Enter Your Details Here</h1>
                     <h3>Kindly Copy and Paste your image link </h3>
                     <div className="apply__inputs">
