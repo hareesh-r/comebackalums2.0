@@ -157,7 +157,7 @@
     text-decoration: none;
 }
 
-.header__infoIcons>.MuiSvgIcon-root {
+.header__infoIcons .MuiSvgIcon-root {
     color: #787878;
 }.active{
     color: red;
