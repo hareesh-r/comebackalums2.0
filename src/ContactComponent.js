@@ -10,7 +10,7 @@ function ContactComponent() {
     return (
         <div className="contactComponent">
             <div className="contactComponent__header">
-                <Header />
+                <Header active={"contact"} />
             </div>
             <div className="show__thread">
                 <h2>Click Here for threads</h2>

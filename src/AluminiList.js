@@ -45,7 +45,7 @@ function AluminiList() {
 
     return (
         <div className="aluminilist">
-            <Header />
+            <Header  active={"list"} />
             <div className="aluminilist__sort">
                 <div class="dropdown">
                     <button class="dropbtn">Sort By <ArrowDropDownIcon /></button>

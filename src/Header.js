@@ -13,7 +13,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { actionTypes } from './reducer';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 
-function Header() {
+function Header({ active }) {
 
     const [{ user }, dispatch] = useStateValue();
 
@@ -24,6 +24,17 @@ function Header() {
             type: actionTypes.RESET_USER,
             user: null,
         });
+    }
+    if (active === "home" && document.getElementById("home_header") != null) {
+        document.getElementById("home_header").classList.add("active");
+    } if (active === "contact" && document.getElementById("contact_header") != null) {
+        document.getElementById("contact_header").classList.add("active");
+    } if (active === "list" && document.getElementById("list_header") != null) {
+        document.getElementById("list_header").classList.add("active");
+    } if (active === "apply" && document.getElementById("apply_header") != null) {
+        document.getElementById("apply_header").classList.add("active");
+    } if (active === "about" && document.getElementById("about_header") != null) {
+        document.getElementById("about_header").classList.add("active");
     }
 
     return (
@@ -40,33 +51,34 @@ function Header() {
             </div>
             <div className="header__center">
                 <Link to="/home">
-                    <div className="header__option ">
+                    <div id="home_header" className="header__option">
                         <div className="icons">
                             <HomeIcon fontSize="large" />
                         </div><div className="icon-name">HOME</div>
                     </div>
                 </Link>
                 <Link to="/about">
-                    <div className="header__option ">
+                    <div id="about_header" className="header__option">
                         <div className="icons">
                             <InfoIcon fontSize="large" /> </div><div className="icon-name">ABOUT</div>
                     </div>
                 </Link>
                 <Link to="/aluminilist">
-                    <div className="header__option ">
+                    <div id="list_header" className="header__option">
                         <div className="icons">
                             <ListAltIcon fontSize="large" /> </div><div className="icon-name">ALUMNI LIST</div>
                     </div></Link>
                 <Link to="/apply">
-                    <div className="header__option ">
+                    <div id="apply_header" className="header__option">
                         <div className="icons">
                             <CreateIcon fontSize="large" /></div><div className="icon-name">ALUMNI APPLICATION</div>
                     </div>
                 </Link>
                 <Link to="/contact">
-                    <div
-                        className="header__option   ">
-                        <ContactMailIcon fontSize="large" /><div className="icon-name">CONTACT</div>
+                    <div id="contact_header"
+                        className="header__option  ">
+                        <div className="icons">
+                            <ContactMailIcon fontSize="large" /></div><div className="icon-name">CONTACT</div>
                     </div>
                 </Link>
             </div>

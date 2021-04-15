@@ -7,7 +7,7 @@ import Header from './Header'
 function Home() {
     return (
         <div>
-            <Header />
+            <Header active={"home"} />
             <Feed />
             <Contact />
         </div>
