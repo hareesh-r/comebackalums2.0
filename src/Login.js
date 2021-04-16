@@ -8,7 +8,7 @@ import Footer from './Footer';
 
 function Login() {
 
-    const [dispatch] = useStateValue();
+    const [{ user } ,dispatch] = useStateValue();
 
     const signIn = () => {
         auth.signInWithPopup(provider)
