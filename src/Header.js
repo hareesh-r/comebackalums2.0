@@ -44,8 +44,8 @@ function Header({ active }) {
                 <Link to="/search">
                     <div className="header__input">
                         <SearchIcon />
-                        <input placeholder="Search alumni    " type="text">
-                        </input>
+                        <input placeholder="Search alumni    " type="text"
+                        />
                     </div>
                 </Link>
             </div>

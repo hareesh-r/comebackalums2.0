@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./About.css";
 import ProgressBar from "./Progressbar";
 import CreateIcon from '@material-ui/icons/Create';
@@ -17,6 +17,9 @@ const testData = [
 
 
 function About() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
     return (
         <div className="about">
             <div className="about__left">

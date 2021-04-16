@@ -42,6 +42,9 @@ function AluminiList() {
         db.collection("aluminis").orderBy(sortBy, "desc").onSnapshot((snapshot) =>
             setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
     }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
 
     return (
         <div className="aluminilist">

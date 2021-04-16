@@ -86,6 +86,9 @@ function Search() {
             .where("aluminiName", "==", "Hareesh").onSnapshot((snapshot) =>
                 setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
     }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
 
     return (
         <div className="search">

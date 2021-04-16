@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Contact from './Contact'
 import Header from './Header'
 import "./ContactComponent.css";
@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 
 function ContactComponent() {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, []);
     return (
         <div className="contactComponent">
             <div className="contactComponent__header">
