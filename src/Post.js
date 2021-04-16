@@ -47,7 +47,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
         }
     }
 
-    let URL = "whatsapp://send?text=Post shared from comebackalums.web.app *" + message + "*";
+    let URL = "whatsapp://send?text=Post shared from https://comebackalums.web.app *" + message + "*";
 
     const [{ user }, dispatch] = useStateValue();
 
