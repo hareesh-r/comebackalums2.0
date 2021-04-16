@@ -24,7 +24,7 @@ function About() {
         <div className="about">
             <div className="about__left">
                 <h2 className="bout">About Us</h2>
-                <h3>Comback</h3>
+                <h3>Comeback</h3>
                 <p>Would be an online platform for college alumni to talk about their experiences as well as to encourage other students regarding what they have accomplished.<br />
                 Hello there, Alumni! Take advantage of this opportunity to inspire a large number of students.<br />
                 Share what you've accomplished during your college career in this segment.<br />
