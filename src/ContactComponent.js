@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function ContactComponent() {
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, []);
+    }, []);
     return (
         <div className="contactComponent">
             <div className="contactComponent__header">

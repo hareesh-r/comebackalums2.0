@@ -19,7 +19,7 @@ const testData = [
 function About() {
     useEffect(() => {
         window.scrollTo(0, 0)
-      }, []);
+    }, []);
     return (
         <div className="about">
             <div className="about__left">

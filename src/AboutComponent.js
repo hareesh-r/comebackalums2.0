@@ -6,7 +6,7 @@ import Header from './Header'
 function AboutComponent() {
     return (
         <div>
-            <Header  active={"about"} />
+            <Header active={"about"} />
             <About />
             <Contact />
         </div>

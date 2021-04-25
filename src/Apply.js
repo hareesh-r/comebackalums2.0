@@ -42,7 +42,7 @@ function Apply() {
     };
     return (
         <div className="apply">
-            <Header  active={"apply"}/>
+            <Header active={"apply"} />
             <div className="apply__top">
                 <form>
                     <h1>Please Enter Your Details Here</h1>

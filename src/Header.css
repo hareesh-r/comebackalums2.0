@@ -159,7 +159,9 @@
 
 .header__infoIcons .MuiSvgIcon-root {
     color: #787878;
-}.active{
+}
+
+.active {
     color: red;
-        border-bottom: 4px solid red;
+    border-bottom: 4px solid red;
 }

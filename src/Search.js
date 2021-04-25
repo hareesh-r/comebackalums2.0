@@ -11,6 +11,7 @@ var searchBy = "name";
 function Search() {
 
     const [aluminis, setAluminis] = useState([]);
+    const [result, setResult] = useState([]);
     const [searchName, setSearch] = useState("");
     var background_nm;
     var background_ds;
@@ -40,18 +41,30 @@ function Search() {
 
         e.preventDefault();
 
+        db.collection("searchData").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => { db.collection("searchData").doc(doc.id).delete() })
+        })
+
+
         if (searchBy === "des") {
-            let newData = [];
-            let refinedNames = [];
 
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     doc.data().designation.split(" ").forEach((partName) => {
                         if (partName.toLowerCase() === searchName.toLowerCase()) {
-                            newData.push(db.collection("aluminis").where("designation", "==", doc.data().designation));
-                            refinedNames.push(doc.data().designation);
-                            db.collection("aluminis").where("designation", "==", doc.data().designation).onSnapshot((snapshot) =>
-                                setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+
+                            db.collection("searchData").add({
+                                message: doc.data().message,
+                                profilePic: doc.data().profilePic,
+                                aluminiName: doc.data().aluminiName,
+                                cgpa: doc.data().cgpa,
+                                designation: doc.data().designation,
+                                regNo: doc.data().regNo,
+                                contactLink: doc.data().contactLink,
+
+                            });
+
+
                         }
                     });
                 });
@@ -59,26 +72,32 @@ function Search() {
         }
 
         else if (searchBy === "name") {
-            let newData = [];
-            let refinedNames = [];
 
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     doc.data().aluminiName.split(" ").forEach((partName) => {
                         if (partName.toLowerCase() === searchName.toLowerCase()) {
-                            newData.push(db.collection("aluminis").where("aluminiName", "==", doc.data().aluminiName));
-                            refinedNames.push(doc.data().aluminiName);
-                            db.collection("aluminis").where("aluminiName", "==", doc.data().aluminiName).onSnapshot((snapshot) =>
-                                setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+
+                            db.collection("searchData").add({
+                                message: doc.data().message,
+                                profilePic: doc.data().profilePic,
+                                aluminiName: doc.data().aluminiName,
+                                cgpa: doc.data().cgpa,
+                                designation: doc.data().designation,
+                                regNo: doc.data().regNo,
+                                contactLink: doc.data().contactLink,
+
+                            });
+
                         }
                     });
                 });
             });
         }
+        db.collection("searchData").onSnapshot((snapshot) =>
+            setResult(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
+
         setSearch("");
-
-
-
     };
 
     useEffect(() => {
@@ -86,6 +105,7 @@ function Search() {
             .where("aluminiName", "==", "Hareesh").onSnapshot((snapshot) =>
                 setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
     }, []);
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);
@@ -103,7 +123,8 @@ function Search() {
                 </div>
                 <h5>Search by: <button className="searchBy__btn" id="namebtn" onClick={setName}>Name</button><button id="desbtn" className="searchBy__btn" onClick={setDes}>Designation</button></h5>
                 <br />
-                {aluminis.map((alumini) => (
+
+                {result.map((alumini) => (
                     <Alumini className="search__alumini"
                         key={alumini.id}
                         profilePic={alumini.data.profilePic}
