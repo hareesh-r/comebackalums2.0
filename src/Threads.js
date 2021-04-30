@@ -8,7 +8,6 @@ import { useStateValue } from './StateProvider';
 import Thread from './Thread';
 import firebase from "firebase";
 
-
 function Threads() {
     const [{ user }] = useStateValue();
     const [thread, setThread] = useState("");

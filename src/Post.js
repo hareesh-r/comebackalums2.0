@@ -1,5 +1,6 @@
 import { Avatar } from '@material-ui/core';
-import { NearMe, ThumbDown, ThumbUp } from '@material-ui/icons';
+import { ThumbDown, ThumbUp } from '@material-ui/icons';
+import ShareIcon from '@material-ui/icons/Share';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import React from 'react'
 import "./Post.css";
@@ -103,9 +104,10 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
                     <p>Remove Like</p>
                 </div>
                 <div className="post__option">
-                    <a href={URL} >
-                        <NearMe />
-                        <p>Share</p></a>
+                    <a href={URL} > 
+                        <ShareIcon />
+                        <p>Share</p>
+                    </a> 
                 </div>
                 <div className="post__option post__option__delete">
                     <DeleteIcon onClick={deletePost} />
