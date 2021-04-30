@@ -49,7 +49,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
     }
 
     let wpURL = "https://wa.me/?text=Post%20shared%20from%20https://comebackalums.web.app%20*" + message.replaceAll(" ","%20").replaceAll("  ","%20").replaceAll("\n","%20").replaceAll("\"","") + "*";
-    console.log(wpURL);
+
     const [{ user }, dispatch] = useStateValue();
 
     const signOut = () => {
