@@ -50,7 +50,7 @@
 }
 
 .dropdown-content button:hover {
-    background-color: red;
+    background-color: rgb(255, 0, 0);
 }
 
 .dropdown:hover .dropdown-content {
