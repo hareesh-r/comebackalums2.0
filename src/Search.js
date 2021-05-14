@@ -50,8 +50,9 @@ function Search() {
 
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    doc.data().designation.split(" ").forEach((partName) => {
-                        if (partName.toLowerCase() === searchName.toLowerCase()) {
+                    console.log(doc.data().designation?.trim());
+                    doc.data().designation?.trim()?.split(" ").forEach((partName) => {
+                        if (partName.toLowerCase() == searchName.toLowerCase()) {
 
                             db.collection("searchData").add({
                                 message: doc.data().message,
@@ -75,8 +76,9 @@ function Search() {
 
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    doc.data().aluminiName.split(" ").forEach((partName) => {
-                        if (partName.toLowerCase() === searchName.toLowerCase()) {
+                    console.log(doc.data().aluminiName?.trim());
+                    doc.data().aluminiName?.trim()?.split(" ").forEach((partName) => {
+                        if (partName.toLowerCase() == searchName.toLowerCase()) {
 
                             db.collection("searchData").add({
                                 message: doc.data().message,
