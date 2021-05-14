@@ -62,13 +62,10 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
     }
 
     let deletePost = () => {
-        console.log("post deleted");
         if (username === user.displayName) {
             if (window.confirm("Your post will be deleted")) {
                 db.collection("posts").doc(id).delete();
                 alert("Your post is successfully deleted");
-            } else {
-                console.log("post not deleted");
             }
         } else {
             alert("You don't have permission to delete " + username + "'s post");

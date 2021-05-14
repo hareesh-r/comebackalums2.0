@@ -12,28 +12,24 @@ function AluminiList() {
 
     const sortByName = () => {
         setSortBy("aluminiName");
-        console.log("Sort by name");
         db.collection("aluminis").orderBy("aluminiName", "asc").onSnapshot((snapshot) =>
             setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
 
     }
     const sortByDesi = () => {
         setSortBy("designation");
-        console.log("Sort by designation");
         db.collection("aluminis").orderBy("designation", "asc").onSnapshot((snapshot) =>
             setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
 
     }
     const sortByReg = () => {
         setSortBy("regNo");
-        console.log("Sort by regNo");
         db.collection("aluminis").orderBy("regNo", "asc").onSnapshot((snapshot) =>
             setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
 
     }
     const sortByCGPA = () => {
         setSortBy("cgpa");
-        console.log("Sort by cgpa");
         db.collection("aluminis").orderBy("cgpa", "desc").onSnapshot((snapshot) =>
             setAluminis(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))));
     }

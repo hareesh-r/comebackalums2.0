@@ -19,7 +19,7 @@ function Apply() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        if (window.confirm("Are You sure ?")) {
         db.collection("aluminis").add({
             message: message,
             profilePic: imageUrl,
@@ -30,6 +30,7 @@ function Apply() {
             contactLink: contactLink,
             applicant: user.displayName,
         });
+    }
 
         setMessage("");
         setImageUrl("");

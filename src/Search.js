@@ -50,7 +50,6 @@ function Search() {
 
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    console.log(doc.data().designation?.trim());
                     doc.data().designation?.trim()?.split(" ").forEach((partName) => {
                         if (partName.toLowerCase() == searchName.toLowerCase()) {
 
@@ -76,7 +75,6 @@ function Search() {
 
             db.collection("aluminis").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    console.log(doc.data().aluminiName?.trim());
                     doc.data().aluminiName?.trim()?.split(" ").forEach((partName) => {
                         if (partName.toLowerCase() == searchName.toLowerCase()) {
 
