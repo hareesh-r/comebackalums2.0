@@ -89,3 +89,30 @@ blockquote {
     display: flex;
     flex-direction: column;
 }
+
+
+/* .aos-init {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    transform: translateX(500px);
+} */
+.aluminilist__body {
+    overflow: hidden;
+}
+
+.aluminilist__body > div:nth-child(even) {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    transform: translateX(-500px);
+}
+
+.aluminilist__body > div:nth-child(odd) {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    transform: translateX(500px);
+}
+
+.aos-animate  {
+    opacity: 1 !important;
+    transform: translateX(0px) !important;
+}

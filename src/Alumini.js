@@ -3,7 +3,7 @@ import "./Alumini.css"
 
 function Alumini({ profilePic, contactLink, message, aluminiName, regNo, cgpa, designation }) {
     return (
-        <div>
+        <div  data-aos="fade-right">
             <div className="alumini">
                 <a href={contactLink} target="__blank">
                     <div className="id-card">

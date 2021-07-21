@@ -1,6 +1,7 @@
 import Alumini from './Alumini'
 import Header from './Header'
 import React, { useEffect, useState } from 'react'
+import AOS from 'aos';
 import db from './firebase';
 import "./AluminiList.css";
 import Contact from './Contact';
@@ -40,6 +41,9 @@ function AluminiList() {
     }, []);
     useEffect(() => {
         window.scrollTo(0, 0)
+        AOS.init({
+            duration: 2000
+        });
     }, []);
 
     return (
