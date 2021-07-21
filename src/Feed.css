@@ -9,3 +9,24 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+.all__posts {
+    overflow: hidden;
+}
+
+.all__posts > div:nth-child(even) {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    transform: translateX(-500px);
+}
+
+.all__posts > div:nth-child(odd) {
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+    transform: translateX(500px);
+}
+
+.aos-animate  {
+    opacity: 1 !important;
+    transform: translateX(0px) !important;
+}

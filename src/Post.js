@@ -2,14 +2,21 @@ import { Avatar } from '@material-ui/core';
 import { ThumbDown, ThumbUp } from '@material-ui/icons';
 import ShareIcon from '@material-ui/icons/Share';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import React from 'react'
+import React , {useEffect} from 'react'
 import "./Post.css";
 import db from './firebase';
 import { useStateValue } from './StateProvider';
 import { actionTypes } from './reducer';
 import DeleteIcon from '@material-ui/icons/Delete';
+import AOS from 'aos';
 
 function Post({ id, profilePic, image, username, timestamp, message, likeCount }) {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000
+        });
+    },[]);
 
     let like = "like" + id;
 
@@ -74,7 +81,7 @@ function Post({ id, profilePic, image, username, timestamp, message, likeCount }
 
 
     return (
-        <div className="post">
+        <div data-aos="fade-right" className="post">
             <div className="post__top">
                 <Avatar src={profilePic} className="post__avatar" />
                 <div className="post__topInfo">

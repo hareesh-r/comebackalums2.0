@@ -18,7 +18,7 @@ function Feed() {
         <div className="feed">
             <ShowOff />
             <PostHere />
-
+            <div className="all__posts">
             {posts.map((post) => (
                 <Post
                     key={post.id}
@@ -31,6 +31,7 @@ function Feed() {
                     likeCount={post.data.likeCount}
                 />
             ))}
+            </div>
         </div>
     )
 }
