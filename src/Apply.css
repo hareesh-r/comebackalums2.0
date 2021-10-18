@@ -21,7 +21,7 @@
     margin-left: 30px;
 }
 
-.apply__inputs input {
+.apply__inputs input,.apply__inputs select {
     border: none;
     justify-content: center;
     border-radius: 10px;
@@ -34,14 +34,16 @@
     cursor: pointer;
     color: white;
     outline-width: 0px;
+}.apply__inputs select {
+    max-width: 520px;
 }
 
-.apply__inputs input:hover {
+.apply__inputs input:hover,.apply__inputs input:focus,.apply__inputs select:hover,.apply__inputs select:focus {
     background-color: black;
 }
 
-.apply__inputs input:focus {
-    background-color: black;
+.apply__inputs select > option:hover,.apply__inputs select > option:focus {
+    color: rgb(0,0,0,0.6);
 }
 
 .apply__inputs button {

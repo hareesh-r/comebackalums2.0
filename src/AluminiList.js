@@ -46,6 +46,18 @@ function AluminiList() {
         });
     }, []);
 
+    function imageExists(image_url){
+        try {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', image_url, false);
+            http.send();
+        }
+        catch(err) {
+            return http.status != 403 && http.status != 404;
+        }
+        return http.status != 403 && http.status != 404;
+    }
+
     return (
         <div className="aluminilist">
             <Header active={"list"} />
@@ -69,7 +81,7 @@ function AluminiList() {
                 {aluminis.map((alumini) => (
                     <Alumini className="aluminilist__alumini"
                         key={alumini.id}
-                        profilePic={alumini.data.profilePic}
+                        profilePic={imageExists(alumini.data.profilePic) ? alumini.data.profilePic : (alumini.data.isMale ? `https://firebasestorage.googleapis.com/v0/b/comebackalums.appspot.com/o/avatar-icon-images-4.jpg?alt=media&token=90930622-551b-44b1-bf50-12f17da35e4b` : `https://firebasestorage.googleapis.com/v0/b/comebackalums.appspot.com/o/87-512.webp?alt=media&token=af35f40d-278e-4712-8832-1333fecc48d3`)}
                         message={alumini.data.message}
                         regNo={alumini.data.regNo}
                         aluminiName={alumini.data.aluminiName}
