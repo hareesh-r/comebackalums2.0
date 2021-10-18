@@ -1,7 +1,7 @@
 
-# My First Full Stack Application
+# First Full Stack Application
 
-### visit [Comeback-alums by Hareesh](https://comebackalums.web.app/)
+### [visit Comebackalums version 2 here](https://comebackalums.web.app/)
 
 
 ## Comeback
